@@ -1,0 +1,30 @@
+ <script>
+        $(document).ready(function() {
+            $('#galerija-carousel').owlCarousel({
+                loop: true,
+                autoplay: true,
+                margin: 20,
+                nav: true, // ovdje ide TRUE umjesto FALSE
+                dots: true,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        center: true,
+                        margin: 10,
+                        dots: false
+                    },
+                    760: {
+                        items: 2
+                    },
+                    980: {
+                        items: 3
+
+                    },
+                    1200: {
+                        items: 4
+                    }
+                }
+            })
+        })
+    </script>

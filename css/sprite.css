@@ -1,0 +1,36 @@
+.svg-brod-bijeli {
+	background: url("../images/spritece-82208647.svg") 0 0 no-repeat;
+}
+
+.svg-brod-bijeli-dims {
+	width: 60px;
+	height: 24px;
+}
+
+.svg-check {
+	background: url("../images/spritece-82208647.svg") 75% 81.81818181818181% no-repeat;
+}
+
+.svg-check-dims {
+	width: 16px;
+	height: 16px;
+}
+
+.svg-minus {
+	background: url("../images/spritece-82208647.svg") 0 100% no-repeat;
+}
+
+.svg-minus-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-plus {
+	background: url("../images/spritece-82208647.svg") 100% 0 no-repeat;
+}
+
+.svg-plus-dims {
+	width: 36px;
+	height: 36px;
+}
+
