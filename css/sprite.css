@@ -1,35 +1,107 @@
 .svg-brod-bijeli {
-	background: url("../images/spritece-82208647.svg") 0 0 no-repeat;
+	background: url("../images/spritece-d23c7ec6.svg") 0 47.57281553398058% no-repeat;
 }
 
 .svg-brod-bijeli-dims {
-	width: 60px;
-	height: 24px;
+	width: 80px;
+	height: 44px;
+}
+
+.svg-bus-bijeli {
+	background: url("../images/spritece-d23c7ec6.svg") 0 71.71717171717172% no-repeat;
+}
+
+.svg-bus-bijeli-dims {
+	width: 80px;
+	height: 52px;
 }
 
 .svg-check {
-	background: url("../images/spritece-82208647.svg") 75% 81.81818181818181% no-repeat;
+	background: url("../images/spritece-d23c7ec6.svg") 16% 45.794392523364486% no-repeat;
 }
 
 .svg-check-dims {
-	width: 16px;
-	height: 16px;
-}
-
-.svg-minus {
-	background: url("../images/spritece-82208647.svg") 0 100% no-repeat;
-}
-
-.svg-minus-dims {
 	width: 36px;
 	height: 36px;
 }
 
+.svg-contact-skype {
+	background: url("../images/spritece-d23c7ec6.svg") 16.52892561983471% 71.71717171717172% no-repeat;
+}
+
+.svg-contact-skype-dims {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-contact-viber {
+	background: url("../images/spritece-d23c7ec6.svg") 27.272727272727273% 71.71717171717172% no-repeat;
+}
+
+.svg-contact-viber-dims {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-contact-whatsup {
+	background: url("../images/spritece-d23c7ec6.svg") 38.01652892561984% 71.71717171717172% no-repeat;
+}
+
+.svg-contact-whatsup-dims {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-croatiaexcursion-logo {
+	background: url("../images/spritece-d23c7ec6.svg") 0 0 no-repeat;
+}
+
+.svg-croatiaexcursion-logo-dims {
+	width: 536px;
+	height: 98px;
+}
+
+.svg-minus {
+	background: url("../images/spritece-d23c7ec6.svg") 0 100% no-repeat;
+}
+
+.svg-minus-dims {
+	width: 56px;
+	height: 56px;
+}
+
 .svg-plus {
-	background: url("../images/spritece-82208647.svg") 100% 0 no-repeat;
+	background: url("../images/spritece-d23c7ec6.svg") 11.666666666666666% 100% no-repeat;
 }
 
 .svg-plus-dims {
+	width: 56px;
+	height: 56px;
+}
+
+.svg-sn-facebook {
+	background: url("../images/spritece-d23c7ec6.svg") 23.2% 45.794392523364486% no-repeat;
+}
+
+.svg-sn-facebook-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-sn-instagram {
+	background: url("../images/spritece-d23c7ec6.svg") 30.4% 45.794392523364486% no-repeat;
+}
+
+.svg-sn-instagram-dims {
+	width: 36px;
+	height: 36px;
+}
+
+.svg-sn-youtube {
+	background: url("../images/spritece-d23c7ec6.svg") 37.6% 45.794392523364486% no-repeat;
+}
+
+.svg-sn-youtube-dims {
 	width: 36px;
 	height: 36px;
 }
