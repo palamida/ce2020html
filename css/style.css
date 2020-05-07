@@ -6,7 +6,8 @@
   --fontSize: 1.4rem;
   --fontSizeLarge: 1.6rem;
   /* boje */
-
+  --bgplava: rgb(150, 220, 250);
+  --c-bgplava: 150 220 250;
   --svplava: rgb(0, 158, 225); /* svijetlo plava */
   --c-svplava: 0 158 225; /* svijetlo plava */
   --plava: rgb(0, 114, 188);
@@ -19,6 +20,8 @@
   --c-zelena: 23 153 53; /* zelena */
   --svzelena: rgb(33, 221, 77); /* svijetlo zelena */
   --c-svzelena: 33 221 77;
+  --bgzelena: rgb(182, 242, 196);
+  --c-bgzelena: 182 242 196;
   --siva: rgb(111, 113, 115); /* siva */
   --c-siva: 111 113 115; /* siva */
   --c-siva: 111 113 115; /* siva */
@@ -629,7 +632,7 @@ input[type='submit'] {
 	font-size: 0.75rem;
 	line-height: 1;
     padding: .6em 1em .4em; */
-  line-height: 1;
+  /* line-height: 1;
 
   position: relative;
   padding: 10px 20px;
@@ -639,7 +642,7 @@ input[type='submit'] {
   transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   box-shadow: 0px -6px 10px rgba(255, 255, 255, 1),
     0px 4px 15px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
+  cursor: pointer; */
 }
 button:hover,
 input[type='button']:hover,
@@ -677,7 +680,8 @@ input[type='datetime-local'],
 input[type='color'],
 textarea {
   color: #666;
-  border: 1px solid var(--magenta);
+  border: 1px solid rgb(0, 114, 188);
+  border: 1px solid var(--plava);
   border-radius: 1px;
   padding: 3px;
 }
@@ -1189,12 +1193,23 @@ a:active {
   display: inline-block;
   width: 292px;
   height: 34px;
-  margin: 0.7rem 1rem;
+  margin: 0.7rem 1rem 0.7rem 2.5rem;
   text-indent: -99999px;
   overflow: hidden;
-  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 516 78'%3E%3Cstyle%3E.st1%7Bfill:%23102d69%7D.st2%7Bfill:%230069b3%7D%3C/style%3E%3Cpath id='XMLID_37_' d='M0 0h516v78H0z' fill='%23ffcb00'/%3E%3Cg id='XMLID_274_'%3E%3Cpath id='XMLID_275_' class='st1' d='M55.2 53.6C54 54.2 51 55 47.3 55 36.6 55 31 48.2 31 39.4 31 28.9 38.6 23 48 23c3.6 0 6.4.7 7.6 1.3l-1.5 5.6c-1.4-.6-3.4-1.1-5.9-1.1-5.5 0-9.8 3.4-9.8 10.3 0 6.2 3.7 10.1 9.9 10.1 2.2 0 4.5-.4 5.9-1l1 5.4z'/%3E%3Cpath id='XMLID_277_' class='st1' d='M58.5 39.4c0-3.3 0-5.5-.2-7.4h6l.3 4.2h.2c1.2-3.3 3.9-4.7 6.1-4.7.6 0 1 0 1.5.1v6.6c-.6-.1-1.1-.2-1.9-.2-2.6 0-4.3 1.3-4.8 3.5-.1.5-.1 1-.1 1.6v11.4h-7V39.4z'/%3E%3Cpath id='XMLID_279_' class='st1' d='M85.8 55c-6.6 0-11.6-4.3-11.6-11.6S79 31.5 86.3 31.5c6.9 0 11.5 4.7 11.5 11.5-.1 8.2-5.9 12-12 12zm.2-5c2.8 0 4.5-2.7 4.5-6.8 0-3.3-1.3-6.7-4.5-6.7-3.3 0-4.6 3.4-4.6 6.8 0 3.8 1.6 6.7 4.6 6.7z'/%3E%3Cpath id='XMLID_282_' class='st1' d='M120.3 49.1c0 2.1.1 4.2.4 5.4h-6.3l-.4-2.3h-.1c-1.5 1.8-3.8 2.8-6.4 2.8-4.6 0-7.3-3.3-7.3-6.9 0-5.8 5.2-8.6 13.2-8.6v-.3c0-1.2-.6-2.9-4.1-2.9-2.3 0-4.7.8-6.2 1.7l-1.3-4.5c1.6-.9 4.6-2 8.7-2 7.5 0 9.8 4.4 9.8 9.7v7.9zm-6.8-5.2c-3.7 0-6.5.9-6.5 3.5 0 1.8 1.2 2.7 2.8 2.7 1.7 0 3.2-1.1 3.6-2.6.1-.4.1-.8.1-1.2v-2.4z'/%3E%3Cpath id='XMLID_285_' class='st1' d='M132.9 25.9V32h5v5.2h-5v8.1c0 2.7.7 4 2.8 4 1 0 1.4 0 2.1-.2v5.3c-.9.3-2.6.6-4.5.6-2.3 0-4.1-.8-5.3-1.9-1.3-1.3-1.9-3.5-1.9-6.7v-9.2h-3V32h3v-4.2l6.8-1.9z'/%3E%3Cpath id='XMLID_287_' class='st1' d='M145.2 29.2c-2.2 0-3.6-1.6-3.6-3.5 0-2 1.5-3.5 3.7-3.5s3.6 1.5 3.7 3.5c0 2-1.5 3.5-3.8 3.5zm-3.4 25.3V32h7v22.5h-7z'/%3E%3Cpath id='XMLID_290_' class='st1' d='M172.6 49.1c0 2.1.1 4.2.4 5.4h-6.3l-.4-2.3h-.1c-1.5 1.8-3.8 2.8-6.4 2.8-4.6 0-7.3-3.3-7.3-6.9 0-5.8 5.2-8.6 13.2-8.6v-.3c0-1.2-.6-2.9-4.1-2.9-2.3 0-4.7.8-6.2 1.7l-1.3-4.5c1.6-.9 4.6-2 8.7-2 7.5 0 9.8 4.4 9.8 9.7v7.9zm-6.8-5.2c-3.7 0-6.5.9-6.5 3.5 0 1.8 1.2 2.7 2.8 2.7 1.7 0 3.2-1.1 3.6-2.6.1-.4.1-.8.1-1.2v-2.4z'/%3E%3Cpath id='XMLID_293_' class='st1' d='M196.3 41.4h-11.4v7.4h12.7v5.8h-19.7v-31H197v5.8h-12.1v6.4h11.4v5.6z'/%3E%3Cpath id='XMLID_295_' class='st1' d='M207.7 32l2.2 3.8c.6 1.1 1.2 2.3 1.8 3.4h.1c.6-1.2 1.2-2.3 1.7-3.5l2-3.6h7.6l-7.4 10.7 7.5 11.8h-7.9l-2.3-4c-.6-1.1-1.2-2.3-1.7-3.5h-.1c-.6 1.2-1.1 2.3-1.7 3.5l-2.1 4h-7.7l7.6-11.5-7.5-11h7.9z'/%3E%3Cpath id='XMLID_297_' class='st1' d='M241.9 53.9c-1.2.6-3.6 1.1-6.3 1.1-7.3 0-11.9-4.5-11.9-11.5 0-6.5 4.5-11.9 12.9-11.9 1.8 0 3.9.3 5.3.9l-1.1 5.2c-.8-.4-2.1-.7-3.9-.7-3.7 0-6.1 2.6-6 6.3 0 4.1 2.8 6.3 6.2 6.3 1.7 0 2.9-.3 4-.7l.8 5z'/%3E%3Cpath id='XMLID_299_' class='st1' d='M266.4 47.3c0 2.9.1 5.3.2 7.2h-6.1l-.3-3.2h-.2c-.9 1.4-3 3.7-7 3.7-4.6 0-7.9-2.9-7.9-9.8V32h7v12.1c0 3.3 1.1 5.2 3.5 5.2 1.9 0 3.1-1.3 3.5-2.4.2-.4.3-.9.3-1.5V32h7v15.3z'/%3E%3Cpath id='XMLID_301_' class='st1' d='M271.5 39.4c0-3.3 0-5.5-.2-7.4h6l.3 4.2h.2c1.2-3.3 3.9-4.7 6.1-4.7.6 0 1 0 1.5.1v6.6c-.6-.1-1.1-.2-1.9-.2-2.6 0-4.3 1.3-4.8 3.5-.1.5-.1 1-.1 1.6v11.4h-7V39.4z'/%3E%3Cpath id='XMLID_303_' class='st1' d='M288.6 48.4c1.3.8 4 1.7 6 1.7 2.1 0 3-.7 3-1.8s-.7-1.7-3.3-2.6c-4.7-1.6-6.5-4.1-6.4-6.7 0-4.2 3.6-7.4 9.2-7.4 2.6 0 4.9.6 6.3 1.3l-1.2 4.8c-1-.5-3-1.2-4.9-1.2-1.7 0-2.7.7-2.7 1.8s.9 1.7 3.6 2.6c4.3 1.5 6 3.6 6.1 6.9 0 4.2-3.3 7.3-9.7 7.3-2.9 0-5.6-.7-7.3-1.6l1.3-5.1z'/%3E%3Cpath id='XMLID_305_' class='st1' d='M311.5 29.2c-2.2 0-3.6-1.6-3.6-3.5 0-2 1.5-3.5 3.7-3.5s3.6 1.5 3.7 3.5c0 2-1.4 3.5-3.8 3.5zm-3.4 25.3V32h7v22.5h-7z'/%3E%3Cpath id='XMLID_308_' class='st1' d='M330.5 55c-6.6 0-11.6-4.3-11.6-11.6s4.8-11.9 12.1-11.9c6.9 0 11.5 4.7 11.5 11.5-.2 8.2-6 12-12 12zm.2-5c2.8 0 4.5-2.7 4.5-6.8 0-3.3-1.3-6.7-4.5-6.7-3.3 0-4.6 3.4-4.6 6.8 0 3.8 1.6 6.7 4.6 6.7z'/%3E%3Cpath id='XMLID_311_' class='st1' d='M346.2 39.2c0-2.8-.1-5.2-.2-7.2h6.1l.3 3.1h.1c.9-1.5 3.2-3.6 6.9-3.6 4.6 0 8.1 3.1 8.1 9.7v13.3h-7V42c0-2.9-1-4.9-3.5-4.9-1.9 0-3.1 1.3-3.6 2.6-.2.5-.2 1.1-.2 1.7v13h-7V39.2z'/%3E%3Cpath id='XMLID_313_' class='st1' d='M372.5 48.4c1.3.8 4 1.7 6 1.7 2.1 0 3-.7 3-1.8s-.7-1.7-3.3-2.6c-4.7-1.6-6.5-4.1-6.4-6.7 0-4.2 3.6-7.4 9.2-7.4 2.6 0 4.9.6 6.3 1.3l-1.2 4.8c-1-.5-3-1.2-4.9-1.2-1.7 0-2.7.7-2.7 1.8s.9 1.7 3.6 2.6c4.3 1.5 6 3.6 6.1 6.9 0 4.2-3.3 7.3-9.7 7.3-2.9 0-5.6-.7-7.3-1.6l1.3-5.1z'/%3E%3Cpath id='XMLID_315_' class='st2' d='M395.8 55c-2.3 0-4-1.8-4-4.2 0-2.5 1.7-4.3 4.1-4.3 2.4 0 4 1.7 4.1 4.3 0 2.4-1.7 4.2-4.2 4.2z'/%3E%3Cpath id='XMLID_317_' class='st2' d='M420.6 53.9c-1.2.6-3.6 1.1-6.3 1.1-7.3 0-11.9-4.5-11.9-11.5 0-6.5 4.5-11.9 12.9-11.9 1.8 0 3.9.3 5.3.9l-1.1 5.2c-.8-.4-2.1-.7-3.9-.7-3.7 0-6.1 2.6-6 6.3 0 4.1 2.8 6.3 6.2 6.3 1.7 0 2.9-.3 4-.7l.8 5z'/%3E%3Cpath id='XMLID_319_' class='st2' d='M434.1 55c-6.6 0-11.6-4.3-11.6-11.6s4.8-11.9 12.1-11.9c6.9 0 11.5 4.7 11.5 11.5-.1 8.2-5.9 12-12 12zm.2-5c2.8 0 4.5-2.7 4.5-6.8 0-3.3-1.3-6.7-4.5-6.7-3.3 0-4.6 3.4-4.6 6.8 0 3.8 1.6 6.7 4.6 6.7z'/%3E%3Cpath id='XMLID_322_' class='st2' d='M449.8 39.2c0-2.8-.1-5.2-.2-7.2h5.9l.3 3.1h.1c1-1.5 3-3.6 6.8-3.6 2.9 0 5.2 1.5 6.2 3.9h.1c.9-1.2 1.8-2.1 2.9-2.8 1.2-.7 2.6-1.1 4.3-1.1 4.3 0 7.6 3 7.6 9.8v13.2H477V42.3c0-3.3-1.1-5.2-3.3-5.2-1.7 0-2.8 1.1-3.3 2.4-.1.5-.2 1.2-.2 1.7v13.2h-6.8V41.9c0-2.8-1-4.7-3.3-4.7-1.8 0-2.9 1.4-3.3 2.5-.2.6-.3 1.2-.3 1.8v13.1h-6.8V39.2z'/%3E%3C/g%3E%3C/svg%3E") 50% 50% no-repeat;
-  background-size: cover;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 516 78'%3E%3Cstyle%3E.st1%7Bfill:%23102d69%7D.st2%7Bfill:%230069b3%7D%3C/style%3E%3Cpath id='XMLID_37_' d='M0 0h516v78H0z' fill='%23ffcb00'/%3E%3Cg id='XMLID_274_'%3E%3Cpath id='XMLID_275_' class='st1' d='M55.2 53.6C54 54.2 51 55 47.3 55 36.6 55 31 48.2 31 39.4 31 28.9 38.6 23 48 23c3.6 0 6.4.7 7.6 1.3l-1.5 5.6c-1.4-.6-3.4-1.1-5.9-1.1-5.5 0-9.8 3.4-9.8 10.3 0 6.2 3.7 10.1 9.9 10.1 2.2 0 4.5-.4 5.9-1l1 5.4z'/%3E%3Cpath id='XMLID_277_' class='st1' d='M58.5 39.4c0-3.3 0-5.5-.2-7.4h6l.3 4.2h.2c1.2-3.3 3.9-4.7 6.1-4.7.6 0 1 0 1.5.1v6.6c-.6-.1-1.1-.2-1.9-.2-2.6 0-4.3 1.3-4.8 3.5-.1.5-.1 1-.1 1.6v11.4h-7V39.4z'/%3E%3Cpath id='XMLID_279_' class='st1' d='M85.8 55c-6.6 0-11.6-4.3-11.6-11.6S79 31.5 86.3 31.5c6.9 0 11.5 4.7 11.5 11.5-.1 8.2-5.9 12-12 12zm.2-5c2.8 0 4.5-2.7 4.5-6.8 0-3.3-1.3-6.7-4.5-6.7-3.3 0-4.6 3.4-4.6 6.8 0 3.8 1.6 6.7 4.6 6.7z'/%3E%3Cpath id='XMLID_282_' class='st1' d='M120.3 49.1c0 2.1.1 4.2.4 5.4h-6.3l-.4-2.3h-.1c-1.5 1.8-3.8 2.8-6.4 2.8-4.6 0-7.3-3.3-7.3-6.9 0-5.8 5.2-8.6 13.2-8.6v-.3c0-1.2-.6-2.9-4.1-2.9-2.3 0-4.7.8-6.2 1.7l-1.3-4.5c1.6-.9 4.6-2 8.7-2 7.5 0 9.8 4.4 9.8 9.7v7.9zm-6.8-5.2c-3.7 0-6.5.9-6.5 3.5 0 1.8 1.2 2.7 2.8 2.7 1.7 0 3.2-1.1 3.6-2.6.1-.4.1-.8.1-1.2v-2.4z'/%3E%3Cpath id='XMLID_285_' class='st1' d='M132.9 25.9V32h5v5.2h-5v8.1c0 2.7.7 4 2.8 4 1 0 1.4 0 2.1-.2v5.3c-.9.3-2.6.6-4.5.6-2.3 0-4.1-.8-5.3-1.9-1.3-1.3-1.9-3.5-1.9-6.7v-9.2h-3V32h3v-4.2l6.8-1.9z'/%3E%3Cpath id='XMLID_287_' class='st1' d='M145.2 29.2c-2.2 0-3.6-1.6-3.6-3.5 0-2 1.5-3.5 3.7-3.5s3.6 1.5 3.7 3.5c0 2-1.5 3.5-3.8 3.5zm-3.4 25.3V32h7v22.5h-7z'/%3E%3Cpath id='XMLID_290_' class='st1' d='M172.6 49.1c0 2.1.1 4.2.4 5.4h-6.3l-.4-2.3h-.1c-1.5 1.8-3.8 2.8-6.4 2.8-4.6 0-7.3-3.3-7.3-6.9 0-5.8 5.2-8.6 13.2-8.6v-.3c0-1.2-.6-2.9-4.1-2.9-2.3 0-4.7.8-6.2 1.7l-1.3-4.5c1.6-.9 4.6-2 8.7-2 7.5 0 9.8 4.4 9.8 9.7v7.9zm-6.8-5.2c-3.7 0-6.5.9-6.5 3.5 0 1.8 1.2 2.7 2.8 2.7 1.7 0 3.2-1.1 3.6-2.6.1-.4.1-.8.1-1.2v-2.4z'/%3E%3Cpath id='XMLID_293_' class='st1' d='M196.3 41.4h-11.4v7.4h12.7v5.8h-19.7v-31H197v5.8h-12.1v6.4h11.4v5.6z'/%3E%3Cpath id='XMLID_295_' class='st1' d='M207.7 32l2.2 3.8c.6 1.1 1.2 2.3 1.8 3.4h.1c.6-1.2 1.2-2.3 1.7-3.5l2-3.6h7.6l-7.4 10.7 7.5 11.8h-7.9l-2.3-4c-.6-1.1-1.2-2.3-1.7-3.5h-.1c-.6 1.2-1.1 2.3-1.7 3.5l-2.1 4h-7.7l7.6-11.5-7.5-11h7.9z'/%3E%3Cpath id='XMLID_297_' class='st1' d='M241.9 53.9c-1.2.6-3.6 1.1-6.3 1.1-7.3 0-11.9-4.5-11.9-11.5 0-6.5 4.5-11.9 12.9-11.9 1.8 0 3.9.3 5.3.9l-1.1 5.2c-.8-.4-2.1-.7-3.9-.7-3.7 0-6.1 2.6-6 6.3 0 4.1 2.8 6.3 6.2 6.3 1.7 0 2.9-.3 4-.7l.8 5z'/%3E%3Cpath id='XMLID_299_' class='st1' d='M266.4 47.3c0 2.9.1 5.3.2 7.2h-6.1l-.3-3.2h-.2c-.9 1.4-3 3.7-7 3.7-4.6 0-7.9-2.9-7.9-9.8V32h7v12.1c0 3.3 1.1 5.2 3.5 5.2 1.9 0 3.1-1.3 3.5-2.4.2-.4.3-.9.3-1.5V32h7v15.3z'/%3E%3Cpath id='XMLID_301_' class='st1' d='M271.5 39.4c0-3.3 0-5.5-.2-7.4h6l.3 4.2h.2c1.2-3.3 3.9-4.7 6.1-4.7.6 0 1 0 1.5.1v6.6c-.6-.1-1.1-.2-1.9-.2-2.6 0-4.3 1.3-4.8 3.5-.1.5-.1 1-.1 1.6v11.4h-7V39.4z'/%3E%3Cpath id='XMLID_303_' class='st1' d='M288.6 48.4c1.3.8 4 1.7 6 1.7 2.1 0 3-.7 3-1.8s-.7-1.7-3.3-2.6c-4.7-1.6-6.5-4.1-6.4-6.7 0-4.2 3.6-7.4 9.2-7.4 2.6 0 4.9.6 6.3 1.3l-1.2 4.8c-1-.5-3-1.2-4.9-1.2-1.7 0-2.7.7-2.7 1.8s.9 1.7 3.6 2.6c4.3 1.5 6 3.6 6.1 6.9 0 4.2-3.3 7.3-9.7 7.3-2.9 0-5.6-.7-7.3-1.6l1.3-5.1z'/%3E%3Cpath id='XMLID_305_' class='st1' d='M311.5 29.2c-2.2 0-3.6-1.6-3.6-3.5 0-2 1.5-3.5 3.7-3.5s3.6 1.5 3.7 3.5c0 2-1.4 3.5-3.8 3.5zm-3.4 25.3V32h7v22.5h-7z'/%3E%3Cpath id='XMLID_308_' class='st1' d='M330.5 55c-6.6 0-11.6-4.3-11.6-11.6s4.8-11.9 12.1-11.9c6.9 0 11.5 4.7 11.5 11.5-.2 8.2-6 12-12 12zm.2-5c2.8 0 4.5-2.7 4.5-6.8 0-3.3-1.3-6.7-4.5-6.7-3.3 0-4.6 3.4-4.6 6.8 0 3.8 1.6 6.7 4.6 6.7z'/%3E%3Cpath id='XMLID_311_' class='st1' d='M346.2 39.2c0-2.8-.1-5.2-.2-7.2h6.1l.3 3.1h.1c.9-1.5 3.2-3.6 6.9-3.6 4.6 0 8.1 3.1 8.1 9.7v13.3h-7V42c0-2.9-1-4.9-3.5-4.9-1.9 0-3.1 1.3-3.6 2.6-.2.5-.2 1.1-.2 1.7v13h-7V39.2z'/%3E%3Cpath id='XMLID_313_' class='st1' d='M372.5 48.4c1.3.8 4 1.7 6 1.7 2.1 0 3-.7 3-1.8s-.7-1.7-3.3-2.6c-4.7-1.6-6.5-4.1-6.4-6.7 0-4.2 3.6-7.4 9.2-7.4 2.6 0 4.9.6 6.3 1.3l-1.2 4.8c-1-.5-3-1.2-4.9-1.2-1.7 0-2.7.7-2.7 1.8s.9 1.7 3.6 2.6c4.3 1.5 6 3.6 6.1 6.9 0 4.2-3.3 7.3-9.7 7.3-2.9 0-5.6-.7-7.3-1.6l1.3-5.1z'/%3E%3Cpath id='XMLID_315_' class='st2' d='M395.8 55c-2.3 0-4-1.8-4-4.2 0-2.5 1.7-4.3 4.1-4.3 2.4 0 4 1.7 4.1 4.3 0 2.4-1.7 4.2-4.2 4.2z'/%3E%3Cpath id='XMLID_317_' class='st2' d='M420.6 53.9c-1.2.6-3.6 1.1-6.3 1.1-7.3 0-11.9-4.5-11.9-11.5 0-6.5 4.5-11.9 12.9-11.9 1.8 0 3.9.3 5.3.9l-1.1 5.2c-.8-.4-2.1-.7-3.9-.7-3.7 0-6.1 2.6-6 6.3 0 4.1 2.8 6.3 6.2 6.3 1.7 0 2.9-.3 4-.7l.8 5z'/%3E%3Cpath id='XMLID_319_' class='st2' d='M434.1 55c-6.6 0-11.6-4.3-11.6-11.6s4.8-11.9 12.1-11.9c6.9 0 11.5 4.7 11.5 11.5-.1 8.2-5.9 12-12 12zm.2-5c2.8 0 4.5-2.7 4.5-6.8 0-3.3-1.3-6.7-4.5-6.7-3.3 0-4.6 3.4-4.6 6.8 0 3.8 1.6 6.7 4.6 6.7z'/%3E%3Cpath id='XMLID_322_' class='st2' d='M449.8 39.2c0-2.8-.1-5.2-.2-7.2h5.9l.3 3.1h.1c1-1.5 3-3.6 6.8-3.6 2.9 0 5.2 1.5 6.2 3.9h.1c.9-1.2 1.8-2.1 2.9-2.8 1.2-.7 2.6-1.1 4.3-1.1 4.3 0 7.6 3 7.6 9.8v13.2H477V42.3c0-3.3-1.1-5.2-3.3-5.2-1.7 0-2.8 1.1-3.3 2.4-.1.5-.2 1.2-.2 1.7v13.2h-6.8V41.9c0-2.8-1-4.7-3.3-4.7-1.8 0-2.9 1.4-3.3 2.5-.2.6-.3 1.2-.3 1.8v13.1h-6.8V39.2z'/%3E%3C/g%3E%3C/svg%3E") 100% 50% no-repeat;
+  background-size: cover
 }
+.logo:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1.3rem;
+    left: 1.3rem;
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M29.1 14.8L17.2 2.9c-1.2-1.2-3.2-1.2-4.4 0L.9 14.8c-1 1-.3 2.8 1.2 2.8h3.3V29h6.5v-7.1c0-1.4 1.2-2.6 2.6-2.6h1c1.4 0 2.6 1.2 2.6 2.6V29h6.5V17.6h3.3c1.5 0 2.2-1.8 1.2-2.8z' fill='%23003965'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    background-size: cover;
+  }
 .footer {
   padding: 20px;
   font-size: 1.4rem;
@@ -1660,6 +1675,150 @@ a:active {
 .widSSPData {
   border: none !important;
 }
+/* Harmonika  */
+.harmodole {
+  font-size: 0.85em;
+  background-color: $ssiva;
+  display: inline-block;
+  padding: 5px 20px 10px;
+  text-align: center;
+  -webkit-transform: all 0.2s ease-in-out;
+          transform: all 0.2s ease-in-out;
+  margin-bottom: 0
+}
+.harmodole span {
+  }
+.harmodole span:after {
+    content: '';
+    @include sprite(st-dole-plava, all);
+    font-size: 0.8em;
+    margin: 0 auto;
+    display: block;
+  }
+.harmodole:hover {
+    cursor: pointer;
+    background-color: #fff;
+  }
+.harmodole.isOpen {
+    background-color: #fff
+  }
+.harmodole.isOpen:hover {
+      color: rgb(111, 113, 115);
+      color: var(--siva);
+    }
+.harmodole.isOpen span:after {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+.nika .harmodole {
+  background-color: #fff
+}
+.nika .harmodole:hover {
+    background-color: rgb(255, 202, 0);
+    background-color: var(--zuta);
+  }
+.harmo {
+  position: relative;
+  text-align: center;
+}
+.nika {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  max-width: 1160px;
+  max-width: var(--maxSirina);
+  margin: 0 auto;
+  padding-top: 0px;
+  padding-bottom: 0px
+}
+@media only screen and (min-width: 960px) {
+.nika {
+    padding-left: 20px;
+    padding-left: var(--marginSadrzaj);
+    padding-right: 20px;
+    padding-right: var(--marginSadrzaj)
+}
+  }
+.isDown {
+  max-height: 100%;
+}
+@media only screen and (min-width: 1200px) {
+.isDown {
+    max-height: 15000px;
+}
+  }
+.isDown {
+  margin-top: 1em;
+}
+.harmoplus {
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.harmoplus:hover {
+    cursor: pointer;
+  }
+.harmoplus:after {
+    /* margin: 10px auto 0; */
+    /* display: block; */
+    content: '';
+    margin-left: 10px;
+    width: 26px;
+    height: 26px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Cstyle%3E.st1%7Bfill:%23fff%7D%3C/style%3E%3Ccircle id='XMLID_539_' cx='18' cy='17.9' r='16' fill='%23102d69'/%3E%3Cpath id='XMLID_536_' class='st1' d='M16.9 12.7h2.4v10.2h-2.4z'/%3E%3Cpath id='XMLID_512_' class='st1' d='M12.9 16.6h10.2V19H12.9z'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    -webkit-animation: 3s pulsiranje linear infinite;
+            animation: 3s pulsiranje linear infinite;
+  }
+.harmoplus.isOpen:after {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='17.9' r='16' fill='%236d6e71'/%3E%3Cpath d='M12.9 16.6h10.2V19H12.9z' fill='%23fff'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    -webkit-animation: none;
+            animation: none;
+  }
+@-webkit-keyframes pulsiranje {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  90% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsiranje {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  90% {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+h3.harmoplus {
+}
+h1.harmoplus {
+  font-size: 2em;
+  font-size: calc(1.5em + 0.5vmin)
+}
+h1.harmoplus:after {
+    font-size: 0.75em;
+  }
 /* // SEARCH FORMA */
 .searchbar {
   position: relative;
@@ -1786,8 +1945,8 @@ a:active {
       box-shadow: none;
     }
 .searchform input[type='checkbox']:checked {
-      background-color: rgb(23, 153, 53);
-      background-color: var(--zelena);
+      background-color: rgb(33, 221, 77);
+      background-color: var(--svzelena);
       box-shadow: none;
       color: #fff;
       padding: 14px;
@@ -1795,10 +1954,12 @@ a:active {
     }
 .searchform input[type='checkbox']:checked:after {
       position: absolute;
+      display: block;
       top: -1px;
       left: -1px;
       content: '';
-      font-size: 2em;
+      width: 32px;
+      height: 32px;
       background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M15.8 3.8l-1.6-1.6c-.3-.3-.6-.4-.9-.1L6.1 9.2 2.7 5.9c-.2-.3-.5-.4-.8-.1L.3 7.4c-.3.3-.4.8-.2 1.1L4 12.3 5.6 14c.3.3.8.1 1-.2l1.6-1.6 7.5-7.5c.4-.3.3-.6.1-.9z' fill='%23fff'/%3E%3C/svg%3E");
     }
 .searchform li {
@@ -1897,20 +2058,20 @@ a:active {
       align-self: flex-start
   }
     }
-.ui-datepicker {
-  background-color: rgb(255, 202, 0);
+/* .ui-datepicker {
   background-color: var(--zuta);
-  padding: 10px
-}
-.ui-datepicker .ui-datepicker-prev,
-  .ui-datepicker .ui-datepicker-next {
+  padding: 10px;
+  & .ui-datepicker-prev,
+  & .ui-datepicker-next {
     display: none;
   }
+} */
 #searchbuton {
   padding: 7px 12px;
   border: none;
   background: rgb(23, 153, 53);
   background: var(--zelena);
+  border-bottom: 3px solid rgb(255 255 255 / 0.7);
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1918,7 +2079,9 @@ a:active {
 }
 #searchbuton:hover {
     cursor: pointer;
-    background: var(--zelena-buton);
+    background: rgb(33, 221, 77);
+    background: var(--svzelena);
+    border-bottom: 3px solid #fff;
   }
 /* // PRIKAZ IZLETA U PROMO TRACI  */
 .promoizleti {
@@ -2292,9 +2455,10 @@ a.booknow:hover {
     color: rgb(111, 113, 115);
     color: var(--siva);
   }
-/* Izlet intro tekst  */
+/* Zajednicke postavke  */
 .izletintro,
-.highlights {
+.highlights,
+.bookinfo {
   max-width: 1160px;
   max-width: var(--maxSirina);
   margin: 5rem auto;
@@ -2303,13 +2467,15 @@ a.booknow:hover {
 }
 @media only screen and (min-width: 960px) {
 .izletintro,
-.highlights {
+.highlights,
+.bookinfo {
     padding-left: 20px;
     padding-left: var(--marginSadrzaj);
     padding-right: 20px;
     padding-right: var(--marginSadrzaj)
 }
   }
+/* Izlet intro tekst  */
 .izletintro h2 {
     /* // font-size: 2em;
     // font-size: calc(0.75em + 3vmin); */
@@ -2325,7 +2491,13 @@ a.booknow:hover {
 .highlights li {
     margin-bottom: 0.8em;
   }
-@media only screen and (min-width: 960px) {
+.highlights ul {
+    list-style-position: outside;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding: 0 var(--marginSadrzaj)
+  }
+@media only screen and (min-width: 680px) {
 .highlights ul {
       -webkit-column-count: 2;
               column-count: 2;
@@ -2343,12 +2515,115 @@ a.booknow:hover {
       -webkit-column-rule-color: var(--svsiva);
               column-rule-color: var(--svsiva)
   }
-      .highlights ul li {
-        margin-left: 20px;
-      }
+    }
+@media only screen and (min-width: 960px) {
+.highlights ul {
+      -webkit-column-count: 3;
+              column-count: 3
+  }
+    }
+.highlights ul li {
+      /* margin-left: 20px; */
+      page-break-inside: avoid;
+      -webkit-column-break-inside: avoid;
+              break-inside: avoid;
+      padding: 0;
+      margin: 0 0 1.5rem 2rem;
     }
 .highlights li {
   }
+/* Izlet booking details  */
+.bookinfo {
+  background-color: rgb(150, 220, 250);
+  background-color: var(--bgplava);
+  padding: 0;
+  border: 2px solid rgb(0, 158, 225);
+  border: 2px solid var(--svplava);
+}
+.mainbookinfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* align-items: start; */
+}
+.basicdata {
+  background-color: rgb(0, 158, 225);
+  background-color: var(--svplava);
+  padding: 20px
+}
+.basicdata h4 {
+    text-transform: uppercase;
+    border-bottom: 1px dotted #fff;
+    padding-bottom: 0.5rem;
+    font-size: 0.9em;
+    margin: 2rem 0 0.75rem 0;
+  }
+.basicdata p {
+    margin: 0 0 0.5rem;
+  }
+.basicdata > * {
+    color: #fff;
+  }
+.bookingdates {
+  padding: 20px;
+  /* background-color: var(--bgplava); */
+  background-color: #fff
+  /* display: grid;
+
+  grid-template-columns: 1fr 1fr; */
+}
+.bookingdates a[name='bookanchor'] {
+    /* display: block;
+    background-color: #f00;
+    width: 50px;
+    height: 50px; */
+    /* grid-row: 1;
+    grid-column: 1; */
+  }
+.bookingdates {
+  /* & h3 {
+    grid-column: 1 / span 2;
+  } */
+}
+.selectadditionaldate {
+  padding: 20px;
+  background-color: rgb(150, 220, 250);
+  background-color: var(--bgplava);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M173.1 22.8h-10.8V38c0 8.7-7.1 15.8-15.8 15.8-8.7 0-15.8-7.1-15.8-15.8V22.8h-63V38c0 8.7-7.1 15.8-15.8 15.8-8.7 0-15.8-7.1-15.8-15.8V22.8H25.3c-6.2 0-11.2 5-11.2 11.2v147.7c0 6.2 5 11.2 11.2 11.2H173c6.2 0 11.2-5 11.2-11.2V33.9c0-6.1-5-11.1-11.1-11.1zm-105.4 143H36.1v-21.4h31.6v21.4zm0-32.8H36.1v-21.4h31.6V133zm0-35.2H36.1V76.3h31.6v21.5zm47.3 68H83.4v-21.4H115v21.4zm0-32.8H83.4v-21.4H115V133zm0-35.2H83.4V76.3H115v21.5zm47.3 68h-31.6v-21.4h31.6v21.4zm0-32.8h-31.6v-21.4h31.6V133zm0-35.2h-31.6V76.3h31.6v21.5zm-25.5-60.6V15.9c0-5.4 4.4-9.7 9.7-9.7 5.4 0 9.7 4.4 9.7 9.7v21.4c0 5.4-4.4 9.7-9.7 9.7-5.4 0-9.7-4.4-9.7-9.8zm-94.7 0V15.9c0-5.4 4.4-9.7 9.7-9.7 5.4 0 9.7 4.4 9.7 9.7v21.4c0 5.4-4.4 9.7-9.7 9.7-5.3 0-9.7-4.4-9.7-9.8z' fill='%23b5e6fb'/%3E%3C/svg%3E");
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+  /* & label {
+    display: none;
+  } */
+}
+.selectadditionaldate #aviabledates {
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 0.5rem auto;
+    background-color: rgb(255 255 255 / 0.2);
+    border-bottom: 3px solid rgb(16, 44, 105);
+    border-bottom: 3px solid var(--tplava)
+  }
+.selectadditionaldate #aviabledates:hover {
+      background-color: rgb(255 255 255 / 0.5);
+    }
+.selectadditionaldate #bookadditionaldate {
+    display: none;
+    margin: 0.5rem auto;
+    padding: 10px 20px;
+    background-color: rgb(23, 153, 53);
+    background-color: var(--zelena);
+    border-bottom: 6px solid rgb(16, 44, 105);
+    border-bottom: 6px solid var(--tplava);
+    color: #fff
+  }
+.selectadditionaldate #bookadditionaldate:hover {
+      background-color: rgb(0, 114, 188);
+      background-color: var(--plava);
+    }
 /*  Book now buton - fiksan na dnu stranice */
 .bookstatic {
   z-index: 900;
