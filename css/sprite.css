@@ -1,37 +1,37 @@
 .svg-boat-bijeli {
-	background: url("../images/spritece.svg") 88.88888888888889% 29.770992366412212% no-repeat;
+	background: url("../images/spritece.svg") 77.36625514403292% 54.60992907801418% no-repeat;
 }
 
 .svg-boat-bijeli-dims {
-	width: 30px;
-	height: 16px;
+	width: 50px;
+	height: 36px;
 }
 
 .svg-bus-bijeli {
-	background: url("../images/spritece.svg") 95.06172839506173% 29.770992366412212% no-repeat;
+	background: url("../images/spritece.svg") 87.65432098765432% 54.60992907801418% no-repeat;
 }
 
 .svg-bus-bijeli-dims {
-	width: 30px;
-	height: 16px;
+	width: 50px;
+	height: 36px;
 }
 
 .svg-but-menu {
-	background: url("../images/spritece.svg") 98.4% 29.770992366412212% no-repeat;
+	background: url("../images/spritece.svg") 97.6% 34.751773049645394% no-repeat;
 }
 
 .svg-but-menu-dims {
-	width: 16px;
-	height: 16px;
+	width: 36px;
+	height: 36px;
 }
 
 .svg-but-menu-close {
-	background: url("../images/spritece.svg") 92.4% 35.87786259541985% no-repeat;
+	background: url("../images/spritece.svg") 54% 73.04964539007092% no-repeat;
 }
 
 .svg-but-menu-close-dims {
-	width: 16px;
-	height: 16px;
+	width: 36px;
+	height: 36px;
 }
 
 .svg-calendar {
@@ -39,53 +39,62 @@
 }
 
 .svg-calendar-dims {
-	width: 200px;
-	height: 200px;
+	width: 220px;
+	height: 220px;
+}
+
+.svg-calendar-tplava {
+	background: url("../images/spritece.svg") 68.59504132231405% 36.8421052631579% no-repeat;
+}
+
+.svg-calendar-tplava-dims {
+	width: 52px;
+	height: 52px;
 }
 
 .svg-car-bijeli {
-	background: url("../images/spritece.svg") 88.88888888888889% 35.87786259541985% no-repeat;
+	background: url("../images/spritece.svg") 97.94238683127573% 54.60992907801418% no-repeat;
 }
 
 .svg-car-bijeli-dims {
-	width: 30px;
-	height: 16px;
+	width: 50px;
+	height: 36px;
 }
 
 .svg-check {
-	background: url("../images/spritece.svg") 95.6% 35.87786259541985% no-repeat;
+	background: url("../images/spritece.svg") 61.2% 73.04964539007092% no-repeat;
 }
 
 .svg-check-dims {
-	width: 16px;
-	height: 16px;
+	width: 36px;
+	height: 36px;
 }
 
 .svg-contact-skype {
-	background: url("../images/spritece.svg") 56.19834710743802% 31.70731707317073% no-repeat;
+	background: url("../images/spritece.svg") 79.33884297520662% 36.8421052631579% no-repeat;
 }
 
 .svg-contact-skype-dims {
-	width: 32px;
-	height: 32px;
+	width: 52px;
+	height: 52px;
 }
 
 .svg-contact-viber {
-	background: url("../images/spritece.svg") 62.8099173553719% 31.70731707317073% no-repeat;
+	background: url("../images/spritece.svg") 90.08264462809917% 36.8421052631579% no-repeat;
 }
 
 .svg-contact-viber-dims {
-	width: 32px;
-	height: 32px;
+	width: 52px;
+	height: 52px;
 }
 
 .svg-contact-whatsup {
-	background: url("../images/spritece.svg") 69.42148760330579% 31.70731707317073% no-repeat;
+	background: url("../images/spritece.svg") 45.45454545454545% 57.89473684210526% no-repeat;
 }
 
 .svg-contact-whatsup-dims {
-	width: 32px;
-	height: 32px;
+	width: 52px;
+	height: 52px;
 }
 
 .svg-croatiaexcursion-logo {
@@ -93,88 +102,88 @@
 }
 
 .svg-croatiaexcursion-logo-dims {
-	width: 516px;
-	height: 78px;
+	width: 536px;
+	height: 98px;
 }
 
 .svg-home {
-	background: url("../images/spritece.svg") 41.1522633744856% 45.96774193548387% no-repeat;
+	background: url("../images/spritece.svg") 45.267489711934154% 76.86567164179104% no-repeat;
 }
 
 .svg-home-dims {
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
 }
 
 .svg-minus {
-	background: url("../images/spritece.svg") 41.666666666666664% 32.231404958677686% no-repeat;
+	background: url("../images/spritece.svg") 45.833333333333336% 37.404580152671755% no-repeat;
 }
 
 .svg-minus-dims {
-	width: 36px;
-	height: 36px;
+	width: 56px;
+	height: 56px;
 }
 
 .svg-plus {
-	background: url("../images/spritece.svg") 49.166666666666664% 32.231404958677686% no-repeat;
+	background: url("../images/spritece.svg") 57.5% 37.404580152671755% no-repeat;
 }
 
 .svg-plus-dims {
+	width: 56px;
+	height: 56px;
+}
+
+.svg-povecalo1 {
+	background: url("../images/spritece.svg") 56.19834710743802% 57.89473684210526% no-repeat;
+}
+
+.svg-povecalo1-dims {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-print {
+	background: url("../images/spritece.svg") 66.94214876033058% 57.89473684210526% no-repeat;
+}
+
+.svg-print-dims {
+	width: 52px;
+	height: 52px;
+}
+
+.svg-sn-facebook {
+	background: url("../images/spritece.svg") 68.4% 73.04964539007092% no-repeat;
+}
+
+.svg-sn-facebook-dims {
 	width: 36px;
 	height: 36px;
 }
 
-.svg-povecalo1 {
-	background: url("../images/spritece.svg") 76.03305785123968% 31.70731707317073% no-repeat;
-}
-
-.svg-povecalo1-dims {
-	width: 32px;
-	height: 32px;
-}
-
-.svg-print {
-	background: url("../images/spritece.svg") 82.64462809917356% 31.70731707317073% no-repeat;
-}
-
-.svg-print-dims {
-	width: 32px;
-	height: 32px;
-}
-
-.svg-sn-facebook {
-	background: url("../images/spritece.svg") 98.8% 35.87786259541985% no-repeat;
-}
-
-.svg-sn-facebook-dims {
-	width: 16px;
-	height: 16px;
-}
-
 .svg-sn-instagram {
-	background: url("../images/spritece.svg") 46% 43.51145038167939% no-repeat;
+	background: url("../images/spritece.svg") 75.6% 73.04964539007092% no-repeat;
 }
 
 .svg-sn-instagram-dims {
-	width: 16px;
-	height: 16px;
+	width: 36px;
+	height: 36px;
 }
 
 .svg-sn-youtube {
-	background: url("../images/spritece.svg") 49.2% 43.51145038167939% no-repeat;
+	background: url("../images/spritece.svg") 82.8% 73.04964539007092% no-repeat;
 }
 
 .svg-sn-youtube-dims {
-	width: 16px;
-	height: 16px;
+	width: 36px;
+	height: 36px;
 }
 
 .svg-sorry {
-	background: url("../images/spritece.svg") 52.191235059760956% 43.18181818181818% no-repeat;
+	background: url("../images/spritece.svg") 89.64143426294821% 72.53521126760563% no-repeat;
 }
 
 .svg-sorry-dims {
-	width: 14px;
-	height: 14px;
+	width: 34px;
+	height: 34px;
 }
 
