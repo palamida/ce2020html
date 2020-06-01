@@ -1506,29 +1506,6 @@ a:active {
     background-color: var(--zelena);
     color: #fff;
   }
-.promolink select {
-    margin: 0 15px;
-    max-width: 85%;
-    box-sizing: border-box;
-    background: transparent;
-    border: none;
-    background-color: rgb(16, 44, 105);
-    background-color: var(--tplava);
-    font-size: 1em;
-    color: tint($plava, 60);
-    padding: 5px;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0px;
-    background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
-    background-position: 100% 50%;
-    background-repeat: no-repeat
-
-    /* If you add too much padding here, the options won't show in IE */
-  }
-.promolink select:focus {
-      color: rgb(16, 44, 105);
-      color: var(--tplava);
-    }
 /* // why book with use */
 .whyus {
   /* background: #eee; */
@@ -1825,13 +1802,70 @@ h1.harmoplus:after {
     font-size: 0.75em;
   }
 /* CAROUSEL */
-.swiper-button-next,
-.swiper-button-prev {
+.swiper-container .swiper-button-next,
+.swiper-container .swiper-button-prev {
   box-sizing: content-box;
   background-color: #fff;
   background-color: rgb(255 255 255 / 0.8);
   padding: 5px 10px;
+  color: rgb(16, 44, 105) !important;
+  color: var(--tplava) !important;
+  transition: background-color 0.2s linear
 }
+.swiper-container .swiper-button-next:hover, .swiper-container .swiper-button-prev:hover {
+    background-color: #fff;
+    color: rgb(0, 114, 188) !important;
+    color: var(--plava) !important;
+  }
+.swiper-container .swiper-button-next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.swiper-container .swiper-button-prev {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.swiper-container .swiper-pagination-progressbar {
+    height: 8px !important;
+    background-color: rgb(255, 202, 0);
+    background-color: var(--zuta);
+  }
+.swiper-container .swiper-pagination-progressbar-fill {
+    background: rgb(16, 44, 105) !important;
+    background: var(--tplava) !important;
+  }
+/* printlink */
+.printlink {
+  display: flex;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #333;
+  background-color: #f0f0f0
+}
+.printlink:hover {
+    color: rgb(0, 114, 188);
+    color: var(--plava);
+    background-color: #fff;
+  }
+.printlink {
+  padding: 0.5em 1.4em;
+  border: 1px solid #333;
+  border-radius: 2em;
+  display: inline-block;
+  line-height: 2em
+}
+.printlink:before {
+    content: '';
+    display: inline-block;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cstyle%3E.st0%7Bfill:%23010101%7D.st1%7Bfill:%23fff%7D%3C/style%3E%3Cpath id='XMLID_769_' class='st0' d='M30.1 8H25V2H7v6H2.6C1.2 8 0 9 0 10.4v12C0 23.8 1.2 24 2.6 24H7v7h18v-7h5.1c1.4 0 1.9-.2 1.9-1.6v-12C32 9 31.4 8 30.1 8zM8 3h16v5H8V3zm16 27H8v-6h16v6z'/%3E%3Cpath id='XMLID_765_' class='st1' d='M8 3h16v5H8z'/%3E%3Cpath id='XMLID_764_' class='st1' d='M8 17h16v13H8z'/%3E%3Cpath id='XMLID_773_' class='st0' d='M10 20h12v1H10z'/%3E%3Cpath id='XMLID_772_' class='st0' d='M10 22h12v2H10z'/%3E%3Cpath id='XMLID_771_' class='st0' d='M10 25h12v2H10z'/%3E%3Cpath id='XMLID_763_' class='st1' d='M6.2 14.9c-.9 0-1.7-.8-1.7-1.7 0-.9.8-1.7 1.7-1.7.9 0 1.7.8 1.7 1.7 0 1-.8 1.7-1.7 1.7z'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    position: relative;
+    top: 0.55em;
+  }
 /* // SEARCH FORMA */
 .searchbar {
   position: relative;
@@ -2827,54 +2861,133 @@ a.booknow:hover {
     padding: 0 20px;
   }
 /* Odabir izleta SELECT */
-/* The container must be positioned relative: */
-#type {
-  display: none; /*hide original SELECT element: */
+.izlet-promolink {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  overflow-x: hidden;
+  margin: 2em auto 0
 }
-.select-selected {
-  background-color: DodgerBlue;
+.izlet-promolink a,
+  .izlet-promolink p {
+    margin: 0 10px 10px 10px;
+  }
+@media only screen and (min-width: 680px) {
+.izlet-promolink a,
+  .izlet-promolink p {
+      border-radius: 10px 10px 0 0;
+      margin: 0 10px;
+  }
+    }
+.izlet-promolink a,
+  .izlet-promolink p {
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    /* border-radius: 2px; */
+    /* font-size: 1em; */
+    flex: 0 1 300px;
+    /* align-self: center; */
+    padding: 8px 15px;
+    /* border-bottom: 1px dotted white;
+    border-bottom: 4px solid rgb(var(--c-plava) / 0.8); */
+    color: #fff;
+    /* background-color: var(--plava);
+    background-color: rgb(var(--c-plava) / 0.4); */
+    background-color: rgb(16, 44, 105);
+    background-color: var(--tplava);
+
+    /* background-color: rgba($plava, 0.7); */
+    -webkit-transform: all 0.2s linear;
+            transform: all 0.2s linear;
+    font-size: 1.4rem;
+  }
+.izlet-promolink p {
+    padding: 14px 20px;
+    padding: 0;
+    text-align: center
+  }
+.izlet-promolink p:hover {
+      background-color: rgb(23, 153, 53);
+      background-color: var(--zelena);
+    }
+.izlet-promolink a:not(:last-child) {
+    padding: 14px 20px;
+    text-align: center;
+  }
+.izlet-promolink a:hover {
+    background-color: rgb(23, 153, 53);
+    background-color: var(--zelena);
+    background-color: rgb(23, 153, 53);
+    background-color: var(--zelena);
+    color: #fff;
+  }
+.select-izleti {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #fff;
+  /* line-height: 1.3; */
+  padding: 14px 40px 14px 20px;
+  width: 250px;
+  max-width: 80%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: none;
+  /* border-bottom: 3px solid var(--tplava); */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  /* background-color: rgb(var(--c-plava) / 0.4); */
+  background-color: transparent;
+  /* background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%; */
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 20L24 8H0z'/%3E%3C/svg%3E") 100% 50% no-repeat;
+  background-size: 18px auto, 100%;
+  -webkit-transform: all 0.2s linear;
+          transform: all 0.2s linear;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: '';
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-/* style the items (options), including the selected item: */
-.select-items div,
-.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-}
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-/* Hide the items when the select box is closed: */
-.select-hide {
+.select-izleti::-ms-expand {
   display: none;
 }
-.select-items div:hover,
-.same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
+.select-izleti:hover {
+  /* border-color: #888; */
+  /* background-color: var(--zelena); */
+}
+.select-izleti:focus {
+  border-color: #fff;
+  color: #fff;
+  outline: none;
+  /* width: auto; */
+}
+.select-izleti option {
+  font-weight: normal;
+}
+select {
+  /* margin: 0 15px;
+  max-width: 85%;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  background-color: var(--tplava);
+  font-size: 1em;
+  color: tint($plava, 60);
+  padding: 5px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
+  background-position: 100% 50%;
+  background-repeat: no-repeat; */
+
+  /* If you add too much padding here, the options won't show in IE */
+  /* &:focus {
+    color: var(--tplava);
+  } */
 }
 /* # Infinite scroll */
 /* # Media
