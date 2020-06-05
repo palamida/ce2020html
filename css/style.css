@@ -2697,11 +2697,38 @@ a.booknow:hover {
     rgb(var(--c-zuta) / 0.8) 100px
   );
 }
+.charter .bookinfo {
+  background: none;
+  background-color: #fff;
+  border: 0;
+  border-top: 1px;
+}
 .mainbookinfo {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   /* align-items: start; */
 }
+.charter .mainbookinfo {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  grid-template-rows: auto
+}
+.charter .mainbookinfo > * {
+    padding: 20px;
+    margin: 0;
+    border: 1px solid rgb(235, 239, 242);
+    border: 1px solid var(--bgsiva);
+    border-top: 0;
+    border-left: 0;
+  }
+.charter .mainbookinfo h4 {
+    text-transform: uppercase;
+    /* border-bottom: 1px dotted var(--bgplava); */
+    padding-bottom: 0.5rem;
+    font-size: 0.9em;
+  }
 .basicdata {
   grid-row: 1;
   grid-column: 1
