@@ -17,7 +17,7 @@
 }
 
 .svg-but-menu {
-	background: url("../images/spritece.svg") 62.8% 73.04964539007092% no-repeat;
+	background: url("../images/spritece.svg") 71.2% 73.04964539007092% no-repeat;
 }
 
 .svg-but-menu-dims {
@@ -26,7 +26,7 @@
 }
 
 .svg-but-menu-close {
-	background: url("../images/spritece.svg") 70% 73.04964539007092% no-repeat;
+	background: url("../images/spritece.svg") 78.4% 73.04964539007092% no-repeat;
 }
 
 .svg-but-menu-close-dims {
@@ -62,12 +62,21 @@
 }
 
 .svg-check {
-	background: url("../images/spritece.svg") 77.2% 73.04964539007092% no-repeat;
+	background: url("../images/spritece.svg") 85.6% 73.04964539007092% no-repeat;
 }
 
 .svg-check-dims {
 	width: 36px;
 	height: 36px;
+}
+
+.svg-check-plavi {
+	background: url("../images/spritece.svg") 63.56275303643725% 74.10071942446044% no-repeat;
+}
+
+.svg-check-plavi-dims {
+	width: 42px;
+	height: 40px;
 }
 
 .svg-contact-skype {
@@ -161,7 +170,7 @@
 }
 
 .svg-sn-facebook {
-	background: url("../images/spritece.svg") 84.4% 73.04964539007092% no-repeat;
+	background: url("../images/spritece.svg") 92.8% 73.04964539007092% no-repeat;
 }
 
 .svg-sn-facebook-dims {
@@ -170,7 +179,7 @@
 }
 
 .svg-sn-instagram {
-	background: url("../images/spritece.svg") 91.6% 73.04964539007092% no-repeat;
+	background: url("../images/spritece.svg") 100% 73.04964539007092% no-repeat;
 }
 
 .svg-sn-instagram-dims {
@@ -179,7 +188,7 @@
 }
 
 .svg-sn-youtube {
-	background: url("../images/spritece.svg") 98.8% 73.04964539007092% no-repeat;
+	background: url("../images/spritece.svg") 44% 90.78014184397163% no-repeat;
 }
 
 .svg-sn-youtube-dims {
@@ -188,7 +197,7 @@
 }
 
 .svg-sorry {
-	background: url("../images/spritece.svg") 43.82470119521912% 90.14084507042253% no-repeat;
+	background: url("../images/spritece.svg") 50.99601593625498% 90.14084507042253% no-repeat;
 }
 
 .svg-sorry-dims {

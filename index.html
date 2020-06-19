@@ -13,13 +13,15 @@
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/sprite.css" />
+  <link rel="stylesheet" href="css/style2020.css" />
 
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@566&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@357&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@337&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" />
   <script src="js/svg4everybody.legacy.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/plugins/rangePlugin.js"></script>
 </head>
 
 <body class="">
@@ -181,15 +183,15 @@
         <a class="partnerlogin" href="https://www.croatiaexcursions.com/index.php?c=login&amp;lng=en">Login</a>
       </div>
     </section>
-    <section class="searchbar">
+    <section class="searchbar" style="display: ;">
       <h3 class="searchcall">Find your best excursion</h3>
       <div class="searchizlet">
-        <form id="excursionSearch" class="formData" method="post" action="/index.php?c=excursions&amp;lng=en">
+        <form id="excursionSearch" class="formData" method="post" action="/index.php?c=excursions2&amp;lng=en">
           <ul class="searchform">
             <li class="ds">
               <label for="type">Excursion type</label>
-              <select name="type" id="type" class="textbox rounded searchField">
-                <option value="-1">All excursions</option>
+              <select id="excursion-type-link" name="type" class="textbox rounded searchField">
+                <option value="-1" selected="selected">All excursions</option>
                 <option value="1">Bus excursions</option>
                 <option value="2">Boat excursions</option>
                 <option value="3">Self drive excursions</option>
@@ -197,22 +199,21 @@
             </li>
             <li>
               <label for="capacity">Number of persons</label>
-              <input name="capacity" value="1" size="3" type="number" min="1" max="99" step="1" id="capacity"
-                class="validate[custom[integer]] textbox rounded" />
+              <input name="capacity" value="1" size="3" type="number" min="1" max="99" step="1" id="capacity" />
             </li>
             <li>
               <label for="free">Available on dates</label>
-              <input name="free" type="checkbox" id="free" onclick="toggleDateFields()" class="" value="on" />
+              <input name="free" type="checkbox" checked="checked" id="free" onclick="toggleDateFields()" class=""
+                value="on" />
             </li>
             <li>
               <label for="datefrom">from</label>
-              <input name="datefrom" value="" type="text" id="datefrom" readonly="true" size="11"
-                class="validate[custom[date]] textbox rounded dateField date kalpop" />
+              <input name="datefrom" type="text" id="datefrom" readonly="true" size="11" class=""
+                data-id="rangePreload" />
             </li>
             <li>
               <label for="dateto">to</label>
-              <input name="dateto" value="" type="text" id="dateto" readonly="true" size="11"
-                class="validate[custom[date]] textbox rounded dateField date kalpop" />
+              <input name="dateto" type="text" id="dateto" readonly="true" size="11" class="" />
             </li>
             <li class="libuton">
               <!--<input class="button2 rounded" type="submit" value="Search">-->
@@ -755,43 +756,39 @@
   </script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <script>
-    $(document).ready(function () {
-      $("#datefrom").datepicker({
-        setDate: "+0D",
-        defaultDate: "+0D",
-        changeMonth: true,
-        changeYear: true,
-        numberOfMonths: 1,
-        dateFormat: "dd.mm.yy",
-        minDate: "+0D",
-        // showOn: "button",
-        buttonImage: "http://keith-wood.name/img/calendar.gif",
-        buttonImageOnly: true,
-        onSelect: function (dateText, inst) {
-          var d = $.datepicker.parseDate(inst.settings.dateFormat, dateText);
-          d.setDate(d.getDate() + 1);
-          $("#dateto").val(
-            $.datepicker.formatDate(inst.settings.dateFormat, d)
-          );
+  <!-- Flatpicker - kalendar u search polju -->
+  <script type="text/javascript">
+    const searchdate = flatpickr("#datefrom", {
+      dateFormat: "Y-m-d",
+      mode: "range",
+      minDate: "today",
+      maxDate: new Date().fp_incr(364),
 
-          $("#dateto").datepicker("option", "minDate", d);
-        },
-      });
-
-      $("#dateto").datepicker({
-        // showOn: "button",
-        buttonImage: "http://keith-wood.name/img/calendar.gif",
-        // buttonImageOnly: true,
-        changeMonth: true,
-        dateFormat: "dd.mm.yy",
-        minDate: "+0D",
-        changeYear: true,
-      });
-
-      // $('#from').attr('readonly', true);
-      // $('#to').attr('readonly', true);
+      dafaultDate: ["today", "today+7"],
+      plugins: [new rangePlugin({ input: "#dateto" })],
     });
+
+    const aviableDates = flatpickr("#aviabledates", {
+      mode: "single",
+      minDate: "today",
+      dafaultDate: "today",
+      enable: [["2020-05-10", "2020-05-15"], "2020-05-22", "2020-05-29", "2020-06-06", "2020-06-15", "2020-06-29"],
+      onChange: function (selectedDates, dateStr, instance) {
+        console.log("SelectedDates=" + selectedDates);
+        console.log("DateStr=" + dateStr);
+        console.log(instance);
+        console.log(instance.link);
+        // instance.input.html = dateStr;
+        document.getElementById("bookadditionaldate").style.display = "block";
+        document.getElementById("odabranidatum").innerHTML = dateStr;
+      },
+      onDayCreate: function (dObj, dStr, fp, dayElem) {
+        dObj.linkdan = "7200" + Date;
+        console.log(fp);
+        console.log(dObj);
+      }
+    })
+
   </script>
 
   <script>

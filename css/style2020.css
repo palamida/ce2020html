@@ -400,7 +400,9 @@ textarea {
   color: var(--bodyColor);
   font-family: 'Inter', sans-serif;
   font-family: var(--bodyFont);
-  font-weight: 357;
+  font-weight: lighter;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
   /* font-size: 16px; */
   line-height: 1.4;
   font-size: 1.4rem;
@@ -431,7 +433,9 @@ h6 {
   font-family: var(--headingFont);
   color: rgb(0, 114, 188);
   color: var(--headingColor);
-  font-weight: 566;
+  font-weight: normal;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
   letter-spacing: -0.1rem;
   line-height: 1.15;
 }
@@ -475,7 +479,9 @@ p {
   color: rgb(16, 44, 105);
   color: var(--bodyColor);
   margin-bottom: 1.5rem;
-  font-weight: 300;
+  font-weight: normal;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
 }
 dfn,
 cite,
@@ -529,7 +535,9 @@ a:hover {
   text-decoration: none;
   font-family: 'Inter', sans-serif;
   font-family: var(--linkFont);
-  font-weight: 300;
+  font-weight: normal;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
   transition: all 0.1s linear;
 }
 a:hover {
@@ -3032,25 +3040,18 @@ a.booknow:hover {
 .select-izleti {
   display: block;
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 337;
   color: #fff;
-  /* line-height: 1.3; */
   padding: 14px 40px 14px 20px;
   width: 250px;
   max-width: 80%;
   box-sizing: border-box;
   margin: 0 auto;
   border: none;
-  /* border-bottom: 3px solid var(--tplava); */
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  /* background-color: rgb(var(--c-plava) / 0.4); */
   background-color: transparent;
-  /* background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
-  background-repeat: no-repeat, repeat;
-  background-position: right 0.7em top 50%, 0 0;
-  background-size: 0.65em auto, 100%; */
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 20L24 8H0z'/%3E%3C/svg%3E") 100% 50% no-repeat;
   background-size: 18px auto, 100%;
   -webkit-transform: all 0.2s linear;
@@ -3061,40 +3062,105 @@ a.booknow:hover {
 .select-izleti::-ms-expand {
   display: none;
 }
-.select-izleti:hover {
-  /* border-color: #888; */
-  /* background-color: var(--zelena); */
-}
 .select-izleti:focus {
   border-color: #fff;
   color: #fff;
   outline: none;
-  /* width: auto; */
 }
 .select-izleti option {
   font-weight: normal;
 }
-select {
-  /* margin: 0 15px;
-  max-width: 85%;
-  box-sizing: border-box;
-  background: transparent;
-  border: none;
-  background-color: var(--tplava);
-  font-size: 1em;
-  color: tint($plava, 60);
-  padding: 5px;
-  -webkit-appearance: none;
-  -webkit-border-radius: 0px;
-  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewBox='0 0 24 24'><path fill='#444' d='M7.406 7.828l4.594 4.594 4.594-4.594 1.406 1.406-6 6-6-6z'></path></svg>");
-  background-position: 100% 50%;
-  background-repeat: no-repeat; */
-
-  /* If you add too much padding here, the options won't show in IE */
-  /* &:focus {
-    color: var(--tplava);
+/* izbornik na dnu stranice */
+.fast-menu-bottom {
+  box-shadow: 0px -1px 15px 0px rgba(0, 0, 0, 0.54);
+  z-index: 900;
+  width: 100%;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  /* display:flex; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-items: center;
+  /* border-top: 4px solid var(--tplava); */
+  background-color: rgb(255, 202, 0);
+  background-color: var(--zuta);
+  color: rgb(16, 44, 105);
+  color: var(--tplava);
+  cursor: pointer;
+  /* &:hover {
+    background-color: var(--plava);
+    color: #fff;
   } */
 }
+.fast-menu-bottom-home {
+  background-color: rgb(0, 158, 225);
+  background-color: var(--svplava);
+  padding: 14px 20px 14px 20px;
+  margin: 0;
+
+  text-align: center
+}
+.fast-menu-bottom-home:hover {
+    background-color: rgb(23, 153, 53);
+    background-color: var(--zelena);
+    color: #fff;
+  }
+.fast-menu-bottom-home {
+  font-size: 1.4rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 100%;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.fast-menu-bottom-home:before {
+    content: '';
+    display: block;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M29.1 14.8L17.2 2.9c-1.2-1.2-3.2-1.2-4.4 0L.9 14.8c-1 1-.3 2.8 1.2 2.8h3.3V29h6.5v-7.1c0-1.4 1.2-2.6 2.6-2.6h1c1.4 0 2.6 1.2 2.6 2.6V29h6.5V17.6h3.3c1.5 0 2.2-1.8 1.2-2.8z' fill='%23003965'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    background-size: cover;
+  }
+.fast-menu-bottom-booking {
+  background-color: rgb(255, 202, 0);
+  background-color: var(--zuta);
+  padding: 14px 20px 14px 20px;
+  margin: 0;
+
+  text-align: center
+}
+.fast-menu-bottom-booking:hover {
+    background-color: rgb(23, 153, 53);
+    background-color: var(--zelena);
+    color: #fff;
+  }
+.fast-menu-bottom-booking {
+  font-size: 1.4rem;
+  color: rgb(16, 44, 105);
+  color: var(--tplava);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+.fast-menu-bottom-booking:before {
+    content: '';
+    display: block;
+    margin-right: 5px;
+    width: 22px;
+    height: 20px;
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 20'%3E%3Cpath d='M18 2.8l-9 9-4.2-4.2c-.3-.3-.7-.4-1-.1L1.7 9.6c-.3.3-.5.9-.2 1.3l4.8 4.8 2.1 2.1c.3.3 1 .1 1.3-.2l2.1-2.1L21.3 6c.3-.3.2-.7-.1-1l-2.1-2c-.3-.4-.8-.5-1.1-.2z' fill='%23003965'/%3E%3C/svg%3E") 50% 50% no-repeat;
+    background-size: cover;
+  }
 /* # Infinite scroll */
 /* # Media
 	## Captions
@@ -3192,4 +3258,4 @@ object {
   margin: 5px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2020.css.map */
