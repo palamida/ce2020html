@@ -1,0 +1,793 @@
+/* Settings */
+:root {
+  /* 62.5% od defaultnih 16px browsera je 10px... tako je laše koristit rem jedinice */
+  font-size: 62.5%;
+
+  --fontSize: 1.4rem;
+  --fontSizeLarge: 1.6rem;
+  /* boje */
+  --bgplava: rgb(150, 220, 250);
+  --c-bgplava: 150 220 250;
+  --svplava: rgb(0, 158, 225); /* svijetlo plava */
+  --c-svplava: 0 158 225; /* svijetlo plava */
+  --plava: rgb(0, 114, 188);
+  --c-plava: 0 114 188; /* more plava */
+  --tplava: rgb(16, 44, 105); /* tamno plava */
+  --c-tplava: 16 44 105; /* tamno plava */
+  --zuta: rgb(255, 202, 0); /* aurea zuta */
+  --c-zuta: 255 202 0; /* aurea zuta */
+  --zelena: rgb(23, 153, 53); /* zelena */
+  --c-zelena: 23 153 53; /* zelena */
+  --svzelena: rgb(33, 221, 77); /* svijetlo zelena */
+  --c-svzelena: 33 221 77;
+  --bgzelena: rgb(182, 242, 196);
+  --c-bgzelena: 182 242 196;
+  --siva: rgb(111, 113, 115); /* siva */
+  --c-siva: 111 113 115; /* siva */
+  --c-siva: 111 113 115; /* siva */
+  --svsiva: rgb(198, 201, 204); /* svijetlo siva */
+  --bgsiva: rgb(235, 239, 242); /* svijetlo siva */
+  --crvena: rgb(249, 36, 96); /* alert crvena */
+
+  --bodyColor: var(--tplava);
+  --headingColor: var(--plava);
+  --linkColor: var(--plava);
+  --linkColorHover: var(--plava);
+
+  /* font */
+  /* --headingFont: "Minion Pro", "Times New Roman", Times, Georgia, "DejaVu Serif", serif; */
+  /* --headingFont: 'Oswald', sans-serif; */
+  --headingFont: 'Inter', sans-serif;
+  --bodyFont: 'Inter', sans-serif;
+  --linkFont: 'Inter', sans-serif;
+
+  /* breakpoints */
+  --mali: 'screen' 600px;
+  --malipx: 600px;
+  --srednji: 'screen' (min-width 960px) (min-height 800px);
+  --veliki: 1160px;
+
+  /* razno */
+  --sirina: 960px;
+  --maxSirina: 1160px;
+  --marginSadrzaj: 20px;
+
+  --izletBriefColor: var(--plava);
+  --c-izletBriefColor: var(--c-plava);
+}
+.bojazelena {
+  --izletBriefColor: var(--zelena);
+  --c-izletBriefColor: var(--c-zelena);
+}
+.bojazuta {
+  --izletBriefColor: var(--zuta);
+  --c-izletBriefColor: var(--c-zuta);
+}
+/* media queries */
+/* custom selectors  */
+/*
+html {
+    font-size: 80%;
+    @media (--tablet) {
+        font-size: 71.25%;
+    }
+    @media (--large) {
+        font-size: 62.5%;
+    }
+}
+*/
+/* Normalize */
+/* # Clearings */
+/* Document
+ * ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+/* Sections
+ * ========================================================================== */
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Edge, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+ * ========================================================================== */
+/**
+ * Remove the margin on nested lists in Chrome, Edge, IE, and Safari.
+ */
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ul dl {
+  margin: 0;
+}
+/**
+ * Remove the margin on nested lists in Edge 18- and IE.
+ */
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+  margin: 0;
+}
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge 18- and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+/**
+ * Add the correct display in IE.
+ */
+main {
+  display: block;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/* Text-level semantics
+ * ========================================================================== */
+/**
+ * Add the correct text decoration in Edge 18-, IE, and Safari.
+ */
+abbr[title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/* Embedded content
+ * ========================================================================== */
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Forms
+ * ========================================================================== */
+/**
+ * Remove the margin on controls in Safari.
+ */
+button,
+input,
+select {
+  margin: 0;
+}
+/**
+ * 1. Show the overflow in IE.
+ * 2. Remove the inheritance of text transform in Edge 18-, Firefox, and IE.
+ */
+button {
+  overflow: visible; /* 1 */
+  text-transform: none; /* 2 */
+}
+/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+/**
+ * Show the overflow in Edge 18- and IE.
+ */
+input {
+  overflow: visible;
+}
+/**
+ * 1. Correct the text wrapping in Edge 18- and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  white-space: normal; /* 1 */
+}
+/**
+ * 1. Add the correct display in Edge 18- and IE.
+ * 2. Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+/**
+ * Remove the inheritance of text transform in Firefox.
+ */
+select {
+  text-transform: none;
+}
+/**
+ * 1. Remove the margin in Firefox and Safari.
+ * 2. Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  margin: 0; /* 1 */
+  overflow: auto; /* 2 */
+}
+/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+/**
+ * Remove the inner border and padding of focus outlines in Firefox.
+ */
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+/**
+ * Restore the focus outline styles unset by the previous rule in Firefox.
+ */
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+/**
+ * Remove the additional :invalid styles in Firefox.
+ */
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+/* Interactive
+ * ========================================================================== */
+/*
+ * Add the correct display in Edge 18- and IE.
+ */
+details {
+  display: block;
+}
+/*
+ * Add the correct styles in Edge 18-, IE, and Safari.
+ */
+dialog {
+  background-color: white;
+  border: solid;
+  color: black;
+  display: block;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  left: 0;
+  margin: auto;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+dialog:not([open]) {
+  display: none;
+}
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+/* Scripting
+ * ========================================================================== */
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+/* User interaction
+ * ========================================================================== */
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+  content: '';
+  display: table;
+  table-layout: fixed;
+}
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+  clear: both;
+}
+li {
+  list-style-type: square;
+}
+/* # Typography */
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  color: rgb(16, 44, 105);
+  color: var(--bodyColor);
+  font-family: 'Inter', sans-serif;
+  font-family: var(--bodyFont);
+  font-weight: lighter;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
+  /* font-size: 16px; */
+  line-height: 1.4;
+  font-size: 1.4rem;
+  font-size: var(--fontSize)
+}
+@media only screen and (min-width: 1200px) {
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+    font-size: 1.6rem;
+    font-size: var(--fontSizeLarge)
+}
+  }
+.fancy {
+  font-family: 'Kaushan Script', cursive;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  font-family: 'Inter', sans-serif;
+  font-family: var(--headingFont);
+  color: rgb(0, 114, 188);
+  color: var(--headingColor);
+  font-weight: normal;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
+  letter-spacing: -0.1rem;
+  line-height: 1.15;
+}
+h1 {
+  font-size: 3rem;
+  font-size: calc(3rem + 1.66vw);
+  /* font-size: calc(4.5rem + 5.294vw); */
+  line-height: 1.1;
+  /* @media (--mobile) {
+    font-size: 4rem;
+    font-size: calc(3rem + 1.66vw);
+  } */
+}
+@media only screen and (min-width: 1200px) {
+h1 {
+    font-size: 5rem;
+}
+  }
+h1 {
+  margin: 1rem 0;
+}
+h2 {
+  font-size: calc(1.4rem * 2);
+  font-size: calc(var(--fontSize) * 2);
+}
+h3 {
+  font-size: calc(1.4rem * 1.6);
+  font-size: calc(var(--fontSize) * 1.6);
+}
+h4 {
+  font-size: calc(1.4rem * 1.4);
+  font-size: calc(var(--fontSize) * 1.4);
+}
+h5,
+h6 {
+  font-size: 1.4rem;
+  font-size: var(--fontSize);
+}
+p {
+  /* font-family: 'Work+Sans'; */
+  color: rgb(16, 44, 105);
+  color: var(--bodyColor);
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
+}
+dfn,
+cite,
+em,
+i {
+  font-style: italic;
+}
+blockquote {
+  margin: 0 1.5em;
+}
+address {
+  margin: 0 0 1.5em;
+}
+pre {
+  background: #eee;
+  font-family: 'Courier 10 Pitch', Courier, monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
+}
+code,
+kbd,
+tt,
+var {
+  font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+mark,
+ins {
+  background: #fff9c0;
+  text-decoration: none;
+}
+big {
+  font-size: 125%;
+}
+/* Links - boja i font */
+a,a.link,a.visited,a.active,
+a:hover {
+  color: rgb(0, 114, 188);
+  color: var(--linkColor);
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-family: var(--linkFont);
+  font-weight: normal;
+  font-weight: 337;
+  font-variation-settings: 'wght' 337;
+  transition: all 0.1s linear;
+}
+a:hover {
+  color: rgb(0, 114, 188);
+  color: var(--linkColorHover);
+}
+/* @supports (font-variation-settings: "wght" 450) {
+	p {
+	  font-variation-settings: 'wght' 300;
+	  transition: all 0.3s linear;
+	}
+	p:hover {
+		font-variation-settings: 'wght' 500;
+	}
+	a:link {
+		font-weight:300;
+		font-variation-settings: 'wght' 300;			
+	}
+	a:hover {
+		font-weight:700;
+		font-variation-settings: 'wght' 700;			
+	}
+  } */
+.cijena span,
+.osobe span {
+  font-size: 0.5em;
+  font-weight: 400;
+}
+/* # Elements */
+/* @import 'partials/_elements.css'; */
+/* # Forms */
+/* @import 'partials/_forms.css'; */
+/* // PRIKAZ IZLETA U PROMO TRACI  */
+.promoizleti {
+  margin: 5rem auto;
+  display: grid;
+  justify-content: center;
+  align-items: stretch;
+  align-content: start;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+  /* grid-template-rows: repeat(3, auto); */
+}
+.link-izlet {
+  display: flex;
+  flex-direction: column;
+}
+.promoizlet {
+  border: 1px dotted #999;
+  flex: 1 1 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative
+}
+.promoizlet header {
+    flex: 1 1 auto;
+    order: 1;
+
+    display: block;
+  }
+.promoizlet .bookinglist {
+    order: 3;
+  }
+.promoizlet .promoizletblok {
+    order: 2;
+    background: none !important;
+  }
+.promoizlet h3 {
+    margin: 0;
+  }
+.promoizlet p {
+    line-height: 1.1em;
+    margin: 1em 0 0;
+  }
+.izletbrief {
+  text-align: left;
+  padding: 10px 0px
+}
+.izletbrief p {
+    color: #000;
+  }
+.izletbrief .cijenaod {
+  }
+.izletbrief .cijenafrom:before {
+    content: 'FROM';
+  }
+.izletbrief .cijenaodhr:before {
+    content: 'OD';
+  }
+.izletbrief .cijenaeur:after {
+      content: ' EUR';
+    }
+.izletbrief .trajanje:before {
+      content: '\2248';
+      content: 'trajanje: ';
+    }
+.izletbrief .trajanje:after {
+      content: ' h';
+    }
+.izletbrief .cijena:before {
+      content: 'cijena: ';
+    }
+.izletbrief .cijena:after {
+      content: ' HRK';
+    }
+.izletbrief .osobe:after {
+      content: ' osoba/persons';
+    }
+a.booknow {
+  display: none;
+}
+/* // prikaz bookinjgdatuma na prikazu svih izleta */
+.bookinglist {
+  /* background-color: #eee; */
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start
+}
+.bookinglist li {
+    font-size: 0.7em;
+    text-align: center;
+    padding: 0 10px 0 0;
+    margin: 0 10px 0 0;
+    list-style-type: none;
+    text-align: center;
+    border-right: 1px dotted #999
+  }
+.bookinglist li a {
+      display: block;
+      color: #000;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      font-size: 1.5rem
+    }
+.bookinglist li a span {
+        font-size: 1rem;
+        display: block;
+        margin-bottom: 0.8em;
+      }
+/* NO DATE nema dostupnih datuma za booking */
+.promoizlet-nodates {
+  padding: 0 10px 15px 2px;
+  border-top: 1px dotted rgb(198, 201, 204);
+  border-top: 1px dotted var(--svsiva)
+}
+.promoizlet-nodates p {
+    font-size: 0.9em;
+    color: #666;
+  }
+/* // PRIKAZ MAXI PROMOIZLETA NA NASLOVNICI  */
+.maxipromoizleti-wrapper {
+  width: 100%
+}
+.maxipromoizleti-wrapper > h2,
+  .maxipromoizleti-wrapper > h3 {
+    max-width: 1160px;
+    max-width: var(--maxSirina);
+    margin: 5rem auto 0 auto;
+    text-align: center;
+    color: #666;
+  }
+.maxipromoizleti {
+  margin: 5rem auto 5rem auto;
+  /* text-align: center; */
+  display: grid;
+  justify-content: center;
+  align-content: start;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+}
+.maxipromoizleti h3 {
+    font-size: 2.5rem;
+  }
+.maxipromoizleti .promoizletblok {
+    position: relative;
+    overflow: hidden;
+  }
+.maxipromoizleti .note {
+    padding: 12px 80px 80px;
+    background-color: #999;
+    color: #fff;
+    -webkit-transform: rotate(-35deg);
+            transform: rotate(-35deg);
+    position: absolute;
+    bottom: -50px;
+    right: -85px;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+.swiper-wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+html,
+body {
+  margin: 20px;
+  color: #000;
+  background-color: #fff;
+}
+html body * {
+  background-color: #fff;
+  color: #000;
+}
+header,
+video,
+.triper,
+.businessmenu,
+.menusocialnetwork,
+.triper,
+.break,
+.promolink,
+.selectadditionaldate,
+.printlink,
+.izlet-video-wrapper,
+.izlet-promolink,
+.fast-menu-bottom,
+.swiper-pagination-progressbar,
+.swiper-pagination-progressbar-fill {
+  display: none;
+}
+.content {
+  margin: 0 auto;
+}
+.footer {
+  margin: 5rem auto;
+  padding-top: 5rem;
+  border-top: 1px dotted #999;
+}
+.menukontakti {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.menukontakti > * {
+  margin: 0 10px;
+}
+.copy {
+  text-align: center;
+}
+
+/*# sourceMappingURL=print.css.map */

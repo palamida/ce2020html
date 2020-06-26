@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="" lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+    <title>CroatiaExcursions.com
+        <!--Naslov se generira na temelju stranice koja se gleda + dadaje se "- CroatiaExcursions.com" ako to nije već u naslovu -->
+    </title>
+    <meta name="description"
+        content="Visiting Croatia? Why not book an exciting excursion, sightseeing tour or a boat trip during your stay!">
+    <meta name="keywords" content="krk croatia excursions">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#102d69">
+    <meta name="apple-mobile-web-app-title" content="Croatia Excursions">
+    <meta name="application-name" content="Croatia Excursions">
+    <meta name="msapplication-TileColor" content="#ffcb00">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffca00">
+
+    <!-- CSS stilovi -->
+
+    <!--Stranice koje nemaju razrađen novi identitet:  
+        <link rel="stylesheet" href="/styles/style.css"> -->
+    <link rel="stylesheet" media="print" href="css/print.css">
+    <link rel="stylesheet" media="screen" href="css/style2020.css" />
+
+    <!-- ovo ne znam čemu služi - gdpr cookies bi trebalo zamjeniti s nečim što ne ovisi o jquerryu -->
+    <link rel="stylesheet" href="/styles/home-contact-style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/gdpr-cookie.css">
+
+    <!-- Google web fonts - NOVI Inter i stari Kaushan Script  -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@337&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" />
+
+    <!-- CSS za novi kalendar u zaglavlju  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+
+    <!-- Javascript -->
+
+    <!-- kalendar Vanilla JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/plugins/rangePlugin.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 11]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+
+    <!-- ZAGLAVLJE -->
+    <header class="zaglavlje">
+        <!-- userbar na vrhu -->
+        <section class="userbar">
+            <section class="branding">
+                <a class="logo" href="#">CroatiaExcursions.com</a>
+            </section>
+            <span class="space"></span>
+            <nav class="menujezik">
+                <ul>
+                    <li><a href="#">HRV</a></li>
+                    <li><a class="active" href="#">ENG</a></li>
+                    <li><a href="#">ITA</a></li>
+                    <li><a href="#">DEU</a></li>
+                </ul>
+            </nav>
+            <p class="menukontakti">
+                Contact us: <a href="tel:+385 99 33 7777 1">+385 99 33 7777 1</a>
+                <a class="contact-skype" href="skype:+38599377771?call">Skype</a>
+                <a class="contact-viber" href="viber://calls?+38599377771">Viber</a>
+                <a class="contact-whatsup" href="whatsapp://call?number=+38599 377771">Whatsup</a>
+            </p>
+            <p class="userlogin currentuser">
+                ZLATOPRUZICA BOAT |
+                <a href="/partners.php?c=reservations">My Reservations</a> |
+                <a href="/index.php?a=logout&amp;lng=en">Log out</a>
+            </p>
+        </section> <!-- /userbar na vrhu -->
+
+        <!-- Menu buton i Overlay izbornik -->
+        <p id="menubuton" class="menubuton">Menu</p>
+        <section class="mainmenuoverlay menuout" role="navigation">
+            <div class="mainmenu">
+                <header class="menutitle">CroatiaExcursions.com Main menu</header>
+                <nav class="menujezik">
+                    <ul>
+                        <li>
+                            <a class="" href="https://www.croatiaexcursions.com/hr/">HR</a>
+                        </li>
+                        <li>
+                            <a class="active" href="https://www.croatiaexcursions.com/en/">EN</a>
+                        </li>
+                        <li>
+                            <a class="" href="https://www.croatiaexcursions.com/index.php?lng=de">DE</a>
+                        </li>
+                        <li>
+                            <a class="" href="https://www.croatiaexcursions.com/index.php?lng=it">IT</a>
+                        </li>
+                        <li>
+                            <a class="" href="https://www.croatiaexcursions.com/hu/">HU</a>
+                        </li>
+                        <li>
+                            <a class="" href="https://www.croatiaexcursions.com/nl/">NL</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="menuglavnestavke">
+                    <a href="https://www.croatiaexcursions.com/en/excursions">See all Excursions</a>
+                    <a href="https://blog.croatiaexcursions.com/" target="_blank">Blog - Get Inspired</a>
+                </nav>
+
+                <nav class="menuizleti">
+                    <section class="menuizletiboat submenuizleti">
+                        <h3>Boat Tours</h3>
+                        <a href="https://www.croatiaexcursions.com/en/excursions/boat-tours/island-krk-cruise"
+                            title="Island cruise with swimming">Island cruise</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/best-beaches-of-the-island-krk"
+                            title="Swimming cruise: Best beaches of the island Krk">Swimming cruise: Best beaches of the
+                            island
+                            Krk</a><a href="https://www.croatiaexcursions.com/en/excursions/boat-tours/night-fishing"
+                            title="Night Fishing with Dinner Aboard">Night Fishing with Dinner Aboard</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/be-a-fisherman-for-one-day"
+                            title="New and unique on the Adriatic: DAILY FISHING ACADEMY: Be a fisherman for one day">New
+                            and unique
+                            on the Adriatic: DAILY FISHING ACADEMY: Be a
+                            fisherman for one day</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/hidden-beaches-escape"
+                            title="Hidden Beaches Escape">Hidden Beaches Escape</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/islands-rab-and-pag"
+                            title="Rab &amp; Pag">Rab &amp; Pag</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/fishpicnic-cres-beli"
+                            title="Fishpicnic - Island of Cres, Beli">Fishpicnic - Island of Cres, Beli</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/panorama-tour-diver-show"
+                            title="Panorama Tour &amp; Diver Show">Panorama Tour &amp; Diver Show</a>
+                    </section>
+                    <section class="menuizletibus submenuizleti">
+                        <h3>Bus Tours</h3>
+                        <a href="https://www.croatiaexcursions.com/en/excursions/other-tours/vrbnik-wine-tales"
+                            title="Vrbnik wine tales">Vrbnik wine tales</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/other-tours/wine-and-olive-oil-experience-island-krk"
+                            title="Wine and Olive Oil Experience of the Island Krk - Krk excursions">Wine and Olive Oil
+                            Experience of
+                            the Island Krk</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/bus-tours/plitvice-lakes-day-trip"
+                            title="Plitvice Lakes day trip">Excursion to Plitvice Lakes</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/other-tours/olive-tasting"
+                            title="Olive Oil Tasting on the Island of Krk - Krk Excursions">Olive Oil Tasting on the
+                            Island of
+                            Krk</a><a href="https://www.croatiaexcursions.com/en/excursions/other-tours/krk-delicacies"
+                            title="Krk Delicacies - Krk Excursions">Krk Delicacies</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/bus-tours/plitvice-lakes-by-boat-and-bus"
+                            title="Plitvice Lakes by Boat and Bus!">Plitvice Lakes by Boat and Bus!</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/bus-tours/island-krk-tour"
+                            title="Island of Krk Tour">Island of Krk Tour</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/other-tours/etno-krk-experience"
+                            title="Etno Krk Experience">Etno Krk Experience - Krk experience</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/venice-by-speedboat"
+                            title="Venice by Speedboat">Venice by Speedboat</a>
+                    </section>
+                    <section class="menuizletiself submenuizleti">
+                        <h3>Self Drive Tours</h3>
+                        <a href="https://www.croatiaexcursions.com/en/excursions/other-tours/canopy-tour"
+                            title="Zipline Canopy Tour">Zipline Canopy Tour</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/islet-kosljun"
+                            title="Islet of Košljun - Krk experience">Islet of Košljun </a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/boat-tours/yellow-submarine-excursion"
+                            title="Yellow Submarine Tour - Krk Excursions">Yellow Submarine Tour </a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/other-tours/biserujka-cave"
+                            title="CAVE BISERUJKA">CAVE BISERUJKA</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/other-tours/aquarium-terrarium-krk"
+                            title="AQUARIUM TERRARIUM KRK">AQUARIUM TERRARIUM KRK</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/other-tours/tropical-aquarium-krk"
+                            title="TROPICAL AQUARIUM KRK">TROPICAL AQUARIUM KRK</a><a
+                            href="https://www.croatiaexcursions.com/en/excursions/other-tours/aquarium-baska"
+                            title="BAŠKA AQUARIUM">BAŠKA AQUARIUM</a>
+                    </section>
+                </nav>
+                <nav class="menustavke">
+                    <a href="https://www.croatiaexcursions.com/en/diving">Diving</a>
+                    <a href="https://www.croatiaexcursions.com/en/group-deals">Group Deals</a>
+                    <a href="https://www.croatiaexcursions.com/en/our-fleet">Our fleet</a>
+                    <!--<a href="/en/what-to-see">What to see?</a>-->
+                    <a href="https://www.croatiaexcursions.com/en/where-to-book">Where to book?</a>
+                </nav>
+
+                <nav class="menusocialnetwork">
+                    <a class="sn-fb" href="https://www.facebook.com/Croexcursions/">Find us on Facebook</a>
+                    <a class="sn-in" href="https://www.instagram.com/krkexperience/">Follow us on Instagram</a>
+                    <a class="sn-yb" href="https://www.youtube.com/channel/UC7z1KM7DGulpPJ8WRivX41Q">Watch us on
+                        Youtube</a>
+                </nav>
+                <section class="menukontakti">
+                    <p><b>CroatiaExcursions.com | </b></p>
+                    <p class="contact-tel">
+                        Contact us: <a href="tel:+385 99 33 7777 1">+385 99 33 7777 1</a>
+                    </p>
+                    <a class="contact-skype" href="skype:+385993377771?call" title="Skype"></a>
+                    <a class="contact-viber" href="viber://contact?number=385993377771" title="Viber"></a>
+                    <a class="contact-whatsup" href="whatsapp://send?text=Excursion help needed!&amp;phone=385993377771"
+                        title="WhatsApp"></a>
+                </section>
+                <section class="menukontakti">
+                    <a class="mailkontakt mailbook"
+                        href="mailto:booking@croatiaexcursions.com">booking@croatiaexcursions.com</a>
+                    <a class="mailkontakt mailinfo"
+                        href="mailto:info@croatiaexcursions.com">info@croatiaexcursions.com</a>
+                </section>
+                <a class="partnerlogin" href="https://www.croatiaexcursions.com/index.php?c=login&amp;lng=en">Login</a>
+            </div>
+        </section> <!-- /Overlay izbornik -->
+
+        <!-- Pretrazivanje -->
+        <section class="searchbar" style="display: ;">
+            <h3 class="searchcall">Find your best excursion</h3>
+            <div class="searchizlet">
+                <form id="excursionSearch" class="formData" method="post" action="/index.php?c=excursions2&amp;lng=en">
+                    <ul class="searchform">
+                        <li class="ds">
+                            <label for="type">Excursion type</label>
+                            <select id="excursion-type-link" name="type" class="textbox rounded searchField">
+                                <option value="-1" selected="selected">All excursions</option>
+                                <option value="1">Bus excursions</option>
+                                <option value="2">Boat excursions</option>
+                                <option value="3">Self drive excursions</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="capacity">Number of persons</label>
+                            <input name="capacity" value="1" size="3" type="number" min="1" max="99" step="1"
+                                id="capacity" />
+                        </li>
+                        <li>
+                            <label for="free">Available on dates</label>
+                            <input name="free" type="checkbox" checked="checked" id="free" onclick="toggleDateFields()"
+                                class="" value="on" />
+                        </li>
+                        <li>
+                            <label for="datefrom">from</label>
+                            <input name="datefrom" type="text" id="datefrom" readonly="true" size="11" class=""
+                                data-id="rangePreload" />
+                        </li>
+                        <li>
+                            <label for="dateto">to</label>
+                            <input name="dateto" type="text" id="dateto" readonly="true" size="11" class="" />
+                        </li>
+                        <li class="libuton">
+                            <!--<input class="button2 rounded" type="submit" value="Search">-->
+                            <p></p>
+                            <button type="submit" id="searchbuton">Search</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </section> <!-- /Pretrazivanje -->
+
+    </header> <!-- /ZAGLAVLJE -->
+
+    <!-- CONTENT Glavni sadrzaj -->
+    <div class="content">
+        <!-- HERO - Zaglavlje stranice s videom u pozadini -->
+        <div class="promo headerpromo" id="promo-zaglavlje">
+            <article class="promoslide">
+                <video class="headerpromo-video" autoplay muted loop playsinline poster="./video/Fish-Web-poster.jpg">
+                    <source src="./video/Fish-Web.webm" type="video/webm" />
+                    <source src="./video/Fish-Web.mp4" type="video/mp4" />
+                </video>
+                <section class="headerpromoinside">
+                    <h1>Discover authentic <br class="break" />Island of Krk</h1>
+                    <h2 class="fancy">By Local Businesses</h2>
+                    <section class="promolink">
+                        <a href="#">See all Excursions</a>
+                        <a href="#">Get Inspired</a>
+                    </section>
+                </section>
+            </article>
+            <section class="akcija">
+                <a href="/en/excursions">
+                    <h3>WELCOME!!!</h3>
+                    <h4>Book the best Tours and Activities on the Island of Krk!</h4>
+                </a>
+            </section>
+        </div> <!-- /HERO video -->
+        <!-- MAXI promo izleti grupa - istaknuti izleti novog tipa CHARTERI - ima ih 4 za sada -->
+        <div class="maxipromoizleti-wrapper">
+            <h2>Dnevni i poludnevni najam broda za cijelo društvo...</h2>
+            <!-- Naslov ispred prikaza MAXI promo izleta -->
+            <section class="maxipromoizleti">
+                <!-- Jedan MAXI promo izlet -->
+                <article class="promoizlet brod bojaplava">
+                    <a class="link-izlet"
+                        href="https://www.croatiaexcursions.com/index.php?c=excursion&amp;eid=29&amp;lng=en">
+                        <header>
+                            <h3>Krstarenje 5 otoka sa kupanjem </h3>
+                            <p>Poludnevni čarter broda od 18 m s posadom uz prekrasne vizure 5 otoka s kupanjem u
+                                skrivenoj pješčanoj uvali.</p>
+                        </header>
+                        <div class="promoizletblok"
+                            style="background-image: url('https://www.croatiaexcursions.com/upload/photo/e_28/thumb/m_sw5.jpg');">
+                            <section class="izletbrief">
+                                <p class="trajanje">5</p>
+                                <p class="cijena"><span>Price</span><br />3.750</p>
+                                <p class="osobe"><span>Max</span><br />20
+                                </p>
+                            </section>
+                            <p class="note">Charter</p>
+                        </div>
+                    </a>
+                    <a class="booknow" href="mailto:info@croatiaexcursions.com">CONTACT US</a>
+                </article> <!-- /Jedan MAXI promo izlet-->
+            </section>
+        </div> <!-- MAXI promo izleti grupa -->
+        <!-- Promo izleti grupa - normalni -->
+        <section class="promoizleti" id="izleti-carousel">
+            <!-- Promo izlet -->
+            <article class="promoizlet brod bojaplava">
+                <a class="link-izlet"
+                    href="https://www.croatiaexcursions.com/index.php?c=excursion&amp;eid=29&amp;lng=en">
+                    <header>
+                        <h3>Daily fishing academy</h3>
+                        <p>Become a fisherman for a day along with swimming, sea to table dining and a great deal of
+                            experience</p>
+                    </header>
+                    <div class="promoizletblok"
+                        style="background-image: url('https://www.croatiaexcursions.com/upload/photo/e_29/thumb/m_kocarenje1.jpg');">
+                        <section class="izletbrief">
+                            <p class="trajanje">8</p>
+                            <p class="cijena"><span>Price from</span><br />450</p>
+                        </section>
+                    </div>
+                </a>
+                <a class="booknow"
+                    href="https://www.croatiaexcursions.com/index.php?c=excursion&amp;eid=29&amp;lng=en#bookanchor">BOOK
+                    NOW</a>
+                <ul class="bookinglist">
+                    <li>
+                        <a
+                            href="https://www.croatiaexcursions.com/index.php?c=booking&amp;eid=29&amp;pid=7159&amp;lng=en"><span>Monday</span>15.6.</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.croatiaexcursions.com/index.php?c=booking&amp;eid=29&amp;pid=7160&amp;lng=en"><span>Monday</span>22.6.</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.croatiaexcursions.com/index.php?c=booking&amp;eid=29&amp;pid=7161&amp;lng=en"><span>Monday</span>29.6.</a>
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.croatiaexcursions.com/index.php?c=booking&amp;eid=29&amp;pid=7162&amp;lng=en"><span>Monday</span>6.7.</a>
+                    </li>
+                </ul>
+            </article> <!-- /Promo izlet -->
+        </section> <!-- /Promo izleti grupa - normalni -->
+        <!-- WHY US -->
+        <section class="whyus">
+            <h3>Why to book with us</h3>
+            <h4>Top 5 Reasons why to book with us</h4>
+            <ul>
+                <li>
+                    Respectful partners with long tradition and rich experience in
+                    excursion organization
+                </li>
+                <li>
+                    We have choosen for you most attractive boat and bus excursions in
+                    the destination
+                </li>
+                <li>
+                    Excursions of highest quality with best destination experience
+                </li>
+                <li>Best price and fair price warranty</li>
+                <li>No Cancellation fee</li>
+            </ul>
+        </section> <!-- /WHY US -->
+        <!-- Tripadvisor poveznica -->
+        <section class="triper">
+        </section> <!-- /Tripadvisor poveznica -->
+    </div> <!-- /CONTENT -->
+    <!-- FOOTER -->
+    <footer class="footer">
+        <nav class="businessmenu">
+            <a href="aboutus.html">Corporate profile</a>
+            <a href="terms.html">Terms and conditions</a>
+            <a href="# ">Download brochure</a>
+        </nav>
+        <nav class="menusocialnetwork">
+            <a class="sn-fb" href="https://www.facebook.com">Find us on Facebook</a>
+            <a class="sn-in" href="https://www.instagram.com">Follow us on Instagram</a>
+            <a class="sn-yb" href="https://www.youtube.com">Watch us on Youtube</a>
+        </nav>
+        <section class="menukontakti">
+            <p><b>CroatiaExcursions.com | </b></p>
+            <p class="contact-tel">
+                Contact us: <a href="tel:+385 99 33 7777 1">+385 99 33 7777 1</a>
+            </p>
+            <a class="contact-skype" href="skype:+38599377771?call">Skype</a>
+            <a class="contact-viber" href="viber://+38599377771">Viber</a>
+            <a class="contact-whatsup" href="whatsapp://call?number=+38599 377771">Whatsup</a>
+        </section>
+        <section class="menukontakti">
+            <a class="mailkontakt mailbook"
+                href="mailto:booking@croatiaexcursions.com">booking@croatiaexcursions.com</a>
+            <a class="mailkontakt mailinfo" href="mailto:info@croatiaexcursions.com">info@croatiaexcursions.com</a>
+        </section>
+        <p class="copy">&copy; CroatiaExcursions.com 2017 - 2020</p>
+    </footer> <!-- /FOOTER -->
+    <!-- Javascript -->
+
+    <!-- Flatpicker - kalendar u search polju -->
+    <script type="text/javascript">
+        const searchdate = flatpickr("#datefrom", {
+            dateFormat: "Y-m-d",
+            mode: "range",
+            minDate: "today",
+            maxDate: new Date().fp_incr(364),
+            dafaultDate: ["today", "today+7"],
+            plugins: [new rangePlugin({ input: "#dateto" })],
+        });
+
+        const aviableDates = flatpickr("#aviabledates", {
+            mode: "single",
+            minDate: "today",
+            dafaultDate: "today",
+            // ubaceni testni datumi kada je izlet moguc
+            // tu bi trebali doci datumi iz baze
+            enable: [["2020-06-30", "2020-07-04"], "2020-07-12", "2020-07-16", "2020-07-17", "2020-07-25", "2020-07-29"],
+            onChange: function (selectedDates, dateStr, instance) {
+                // Ukljuceno logiranje - iskljuciti u konacnoj verziji
+                console.log("SelectedDates=" + selectedDates);
+                console.log("DateStr=" + dateStr);
+                console.log(instance);
+                console.log(instance.link);
+                // instance.input.html = dateStr;
+                document.getElementById("bookadditionaldate").style.display = "block";
+                document.getElementById("odabranidatum").innerHTML = dateStr;
+            },
+            onDayCreate: function (dObj, dStr, fp, dayElem) {
+                dObj.linkdan = "7200" + Date;
+                // console.log(fp);
+                // console.log(dObj);
+            }
+        })
+
+    </script>
+
+    <script src="js/script.js "></script>
+</body>
+
+
+</html>

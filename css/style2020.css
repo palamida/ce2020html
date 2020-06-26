@@ -561,6 +561,11 @@ a:hover {
 		font-variation-settings: 'wght' 700;			
 	}
   } */
+.cijena span,
+.osobe span {
+  font-size: 0.5em;
+  font-weight: 400;
+}
 /* # Elements */
 html {
   box-sizing: border-box;
@@ -2168,6 +2173,7 @@ h1.harmoplus:after {
 }
 .promoizlet {
   flex: 1 1 100vw;
+  max-width: 680px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -2564,8 +2570,14 @@ a.booknow:hover {
   align-items: stretch;
   align-content: start;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr))
+}
+@media only screen and (min-width: 960px) {
+.maxipromoizleti {
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr))
+}
+  }
+.maxipromoizleti {
   /* grid-template-rows: repeat(3, auto); */
 }
 .maxipromoizleti h3 {
