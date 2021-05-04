@@ -46,12 +46,16 @@
   <!-- CSS za novi kalendar u zaglavlju  -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 
+  <!-- CSS za cookies eu banner  -->
+  <link rel="stylesheet" media="screen" href="css/cookies-eu-banner.default.css" />
+
   <!-- Javascript -->
 
   <!-- kalendar Vanilla JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/flatpickr.min.js"></script>
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.3/plugins/rangePlugin.js"></script>
+
 </head>
 
 <body class="">
@@ -62,6 +66,12 @@
         your experience.
       </p>
     <![endif]-->
+  <div id="cookies-eu-banner" style="display: none;">
+    By continuing your visit to this site, you accept the use of cookies by Google Analytics to make visits statistics.
+    <a href="./read-more.html" id="cookies-eu-more">Read more</a>
+    <button id="cookies-eu-reject">Reject</button>
+    <button id="cookies-eu-accept">Accept</button>
+  </div>
   <header class="zaglavlje">
     <section class="userbar">
       <section class="branding">
@@ -775,17 +785,6 @@
     <p class="copy">&copy; CroatiaExcursions.com 2017 - 2020</p>
   </footer>
 
-  <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>-->
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-  <script>
-    window.jQuery ||
-      document.write(
-        '<script src="js/vendor/jquery-1.11.2.min.js "><\/script>'
-      );
-  </script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
   <!-- Flatpicker - kalendar u search polju -->
   <script type="text/javascript">
     const searchdate = flatpickr("#datefrom", {
@@ -825,6 +824,12 @@
     svg4everybody(); // run it now or whenever you are ready
   </script>
   <script src="js/script.js "></script>
+  <script src="js/cookies-eu-banner.min.js"></script>
+  <script>
+    new CookiesEuBanner(function () {
+      // Your code here
+    });
+  </script>
 </body>
 
 </html>

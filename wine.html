@@ -48,6 +48,10 @@
   <!-- CSS za slider slika kod prikaza izleta  -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 
+  <!-- CSS za cookies eu banner  -->
+  <link rel="stylesheet" media="screen" href="css/cookies-eu-banner.default.css" />
+
+
   <!-- Javascript -->
 
   <!-- kalendar Vanilla JS -->
@@ -64,6 +68,13 @@
         your experience.
       </p>
     <![endif]-->
+  <div id="cookies-eu-banner" style="display: none;">
+    By continuing your visit to this site, you accept the use of cookies by Google Analytics to make visits
+    statistics.
+    <a href="./read-more.html" id="cookies-eu-more">Read more</a>
+    <button id="cookies-eu-reject">Reject</button>
+    <button id="cookies-eu-accept">Accept</button>
+  </div>
   <header class="zaglavlje">
     <section class="userbar">
       <section class="branding">
@@ -641,18 +652,7 @@
     <!-- Google Tag Manager -->
     <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KL27P2" height="0" width="0"
         style="display: none; visibility: hidden;"></iframe></noscript>
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-KL27P2");
-    </script>
+
     <!-- End Google Tag Manager -->
 
 
@@ -686,52 +686,8 @@
       <p class="copy">© CroatiaExcursions.com</p>
     </footer>
 
-    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js "></script>-->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          '<script src="js/vendor/jquery-1.11.2.min.js "><\/script>'
-        );
-    </script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-
-
-    <!--<script src="/js/vendor/bootstrap.min.js "></script>-->
-
-    <script type="text/javascript" src="www.croatiaexcursions.com/js/jquery.ihavecookies.min.js"></script>
-    <script type="text/javascript">
-      $("body").ihavecookies();
-    </script>
-
     <script type="text/javascript" id="">
-      !(function (b, e, f, g, a, c, d) {
-        b.fbq ||
-          ((a = b.fbq = function () {
-            a.callMethod
-              ? a.callMethod.apply(a, arguments)
-              : a.queue.push(arguments);
-          }),
-            b._fbq || (b._fbq = a),
-            (a.push = a),
-            (a.loaded = !0),
-            (a.version = "2.0"),
-            (a.queue = []),
-            (c = e.createElement(f)),
-            (c.async = !0),
-            (c.src = g),
-            (d = e.getElementsByTagName(f)[0]),
-            d.parentNode.insertBefore(c, d));
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js"
-      );
-      fbq("init", "448151438871598");
-      fbq("track", "PageView");
+
     </script>
     <!-- Flatpicker - kalendar u search polju -->
     <script type="text/javascript">
@@ -749,7 +705,7 @@
         mode: "single",
         minDate: "today",
         dafaultDate: "today",
-        enable: [["2020-05-10", "2020-05-15"], "2020-05-22", "2020-05-29", "2020-06-06", "2020-06-15", "2020-06-29"],
+        enable: [["2020-06-30", "2020-07-04"], "2020-07-12", "2020-07-16", "2020-07-17", "2020-07-25", "2020-07-29"],
         onChange: function (selectedDates, dateStr, instance) {
           console.log("SelectedDates=" + selectedDates);
           console.log("DateStr=" + dateStr);
@@ -804,6 +760,50 @@
     <script type="text/javascript" src="js/script.js"></script>
     <noscript><img height="1" width="1" style="display: none;"
         src="https://www.facebook.com/tr?id=448151438871598&amp;ev=PageView&amp;noscript=1" /></noscript>
+    <script src="js/cookies-eu-banner.min.js"></script>
+    <script>
+      new CookiesEuBanner(function () {
+        // Your code here
+        !(function (b, e, f, g, a, c, d) {
+          b.fbq ||
+            ((a = b.fbq = function () {
+              a.callMethod
+                ? a.callMethod.apply(a, arguments)
+                : a.queue.push(arguments);
+            }),
+              b._fbq || (b._fbq = a),
+              (a.push = a),
+              (a.loaded = !0),
+              (a.version = "2.0"),
+              (a.queue = []),
+              (c = e.createElement(f)),
+              (c.async = !0),
+              (c.src = g),
+              (d = e.getElementsByTagName(f)[0]),
+              d.parentNode.insertBefore(c, d));
+        })(
+          window,
+          document,
+          "script",
+          "https://connect.facebook.net/en_US/fbevents.js"
+        );
+        fbq("init", "448151438871598");
+        fbq("track", "PageView");
+        //
+
+      });
+      // google
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "//www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KL27P2");
+    </script>
 </body>
 
 </html>
